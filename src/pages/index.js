@@ -12,9 +12,9 @@ import Hero from '../components/Hero'
 
 import { media } from '../utils/style'
 
-import Layout from '../components/layout'
-import HeroText from '../components/heroText'
-import Social from '../components/social'
+import Layout from '../components/Layout'
+import HeroText from '../components/HeroText'
+import Social from '../components/Social'
 
 const StyledHero = styled(Hero)`
   margin-top:-62px;
