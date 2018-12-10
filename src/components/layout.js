@@ -73,7 +73,7 @@ const FooterText = styled.div`
   padding: 3em;
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ children, noMenu }) => (
   <StaticQuery
     query={graphql`
       query layoutQuery {
@@ -95,6 +95,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+      {console.log(noMenu)}
         <Body>
           <GlobalStyle />
           <Helmet
@@ -103,7 +104,7 @@ const Layout = ({ children }) => (
             <html lang="en" />
             <meta name="description" content="I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"/>
           </Helmet>
-          <Navbar menu={data.allMenuJson.edges}/>
+          <Navbar menu={data.allMenuJson.edges} noMenu={noMenu}/>
             {children}
           <Footer>
             <FooterText>

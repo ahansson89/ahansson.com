@@ -73,19 +73,25 @@ const NavBar = (props) => (
         ]}>
         <Name/>
       </NameBox>
-      <MenuBox px={2} width={[
-          0,
-          2 / 3,
-          4 / 6
-        ]}>
-        <ul>
-          {props.menu.map(({node: item}) => (
-            <li key={item.id}>
-              <MenuItem onClick={() => {scrollToElement(item.link)}}>{item.title}</MenuItem>
-            </li>
-          ))}
-        </ul>
-      </MenuBox>
+      {console.log(props)}
+      {!props.noMenu ? (
+        <MenuBox px={2} width={[
+            0,
+            2 / 3,
+            4 / 6
+          ]}>
+          <ul>
+            {props.menu.map(({node: item}) => (
+              <li key={item.id}>
+                <MenuItem onClick={() => {scrollToElement(item.link)}}>{item.title}</MenuItem>
+              </li>
+            ))}
+          </ul>
+        </MenuBox>
+      ):(
+        <>
+        </>
+      )}
     </Flex>
   </Base>
 )
