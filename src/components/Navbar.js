@@ -73,7 +73,6 @@ const NavBar = (props) => (
         ]}>
         <Name/>
       </NameBox>
-      {console.log(props)}
       {!props.noMenu ? (
         <MenuBox px={2} width={[
             0,

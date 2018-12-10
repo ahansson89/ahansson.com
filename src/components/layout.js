@@ -95,7 +95,6 @@ const Layout = ({ children, noMenu }) => (
     `}
     render={data => (
       <>
-      {console.log(noMenu)}
         <Body>
           <GlobalStyle />
           <Helmet
