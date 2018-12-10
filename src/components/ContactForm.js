@@ -16,7 +16,6 @@ const Form = styled.form`
 const Name = styled.input`
   border:0;
   padding:10px;
-  font-family:Arial, sans-serif;
   color:#333;
   border:solid 1px #ccc;
   margin:0 0 20px;
@@ -28,7 +27,6 @@ const Name = styled.input`
 const Email = styled.input`
   border:0;
   padding:10px;
-  font-family:Arial, sans-serif;
   color:#333;
   border:solid 1px #ccc;
   margin:0 0 20px;
@@ -40,7 +38,6 @@ const Email = styled.input`
 const Message = styled.textarea`
   border:0;
   padding:10px;
-  font-family:Arial, sans-serif;
   color:#333;
   border:solid 1px #ccc;
   margin:0 0 20px;
@@ -53,7 +50,6 @@ const Submit = styled.input`
   border:solid 1px #ccc;
   padding:15px 30px;
   margin:0 0 20px;
-  font-family:Arial, sans-serif;
   text-transform:uppercase;
   font-weight:bold;
   color:#333;
