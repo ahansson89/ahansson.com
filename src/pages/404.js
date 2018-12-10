@@ -2,10 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 
 import {graphql} from 'gatsby'
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import Hero from '../components/Hero'
-
-import { media } from '../utils/style'
 
 import HeroText from '../components/heroText'
 import Social from '../components/social'

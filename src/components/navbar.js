@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import {Flex, Box} from 'grid-styled'
 import scrollToElement from 'scroll-to-element'
 

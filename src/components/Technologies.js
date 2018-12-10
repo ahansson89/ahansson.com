@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 import { media } from '../utils/style'
@@ -18,25 +18,6 @@ const Item = styled.div`
     padding:1em;
   ` }
   display:inline-block;
-`
-
-const Name = styled.h3`
-  display:block;
-  letter-spacing: 2px;
-  font-weight: 700;
-  float: left;
-`
-
-const Duration = styled.div`
-  display:block;
-  float: right;
-  clear:both;
-`
-
-const Authority = styled.div`
-  display:block;
-  clear:both;
-  text-align: left;
 `
 
 class Experience extends React.Component {

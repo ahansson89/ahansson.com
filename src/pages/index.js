@@ -1,7 +1,5 @@
 import React from 'react'
-import LazyHero from 'react-lazy-hero'
 import {graphql} from 'gatsby'
-import Img from '../images/golden-gate.jpg'
 import styled, {css} from 'styled-components'
 import { Flex, Box } from 'grid-styled'
 import Link from '../components/Link'
