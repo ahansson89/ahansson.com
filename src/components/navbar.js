@@ -22,10 +22,18 @@ const Base = styled.div `
     list-style: none;
     font-size: 13px;
   }
+
+`
+
+const MenuBox = styled(Box)`
   ${ media.xs`
-    & ul {
-      display: none;
-    }
+    display: none;
+  ` }
+`
+
+const NameBox = styled(Box)`
+  ${ media.xs`
+    text-align:center;
   ` }
 `
 
@@ -50,19 +58,22 @@ const MenuItem = styled.button`
    text-decoration: none;
    cursor: pointer;
    transition: opacity .3s ease;
+   ${ media.sm`
+     margin-right: 15px;
+   ` }
 `
 
 const NavBar = (props) => (
   <Base>
     <Flex>
-      <Box px={2} width={[
+      <NameBox px={2} width={[
           1,
           1 / 3,
           2 / 6
         ]}>
         <Name/>
-      </Box>
-      <Box px={2} width={[
+      </NameBox>
+      <MenuBox px={2} width={[
           0,
           2 / 3,
           4 / 6
@@ -74,7 +85,7 @@ const NavBar = (props) => (
             </li>
           ))}
         </ul>
-      </Box>
+      </MenuBox>
     </Flex>
   </Base>
 )
