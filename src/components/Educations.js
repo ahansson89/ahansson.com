@@ -14,18 +14,27 @@ const Program = styled.h3`
   letter-spacing: 2px;
   font-weight: 700;
   float: left;
+  ${ media.xs`
+    float:none;
+  ` }
 `
 
 const Duration = styled.div`
   display:block;
   float: right;
   clear:both;
+  ${ media.xs`
+    float:none;
+  ` }
 `
 
 const School = styled.div`
   display:block;
   clear:both;
   text-align: left;
+  ${ media.xs`
+    text-align:center;
+  ` }
 `
 
 class Educations extends React.Component {

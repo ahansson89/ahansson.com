@@ -7,10 +7,16 @@ import { media } from '../utils/style'
 const Wrapper = styled.div`
     width: 60%;
     margin: 0 auto;
+    ${ media.xs`
+      width:100%;
+    ` }
 `
 
 const Item = styled.div`
   padding: 1.5em;
+  ${ media.xs`
+    padding:1em;
+  ` }
   display:inline-block;
 `
 

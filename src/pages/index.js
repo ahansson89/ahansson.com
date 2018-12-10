@@ -48,6 +48,9 @@ const Section = styled.div`
 const SectionTitle = styled.h2`
   font-size: 2em;
   margin: 0.67em 0;
+  ${ media.xs`
+    font-size:1.5em;
+  ` }
 `
 
 const IndexPage = ({data}) => (

@@ -49,6 +49,7 @@ const Body = styled.div`
   min-height: 100vh;
   flex-direction: column;
   width: 100vw;
+  overflow: hidden;
   img {
     margin-bottom: 0;
   }
