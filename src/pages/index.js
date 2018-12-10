@@ -10,6 +10,7 @@ import Certifications from '../components/Certifications'
 import Technologies from '../components/Technologies'
 import Educations from '../components/Educations'
 import ContactForm from '../components/ContactForm'
+import Hero from '../components/Hero'
 
 import { media } from '../utils/style'
 
@@ -17,9 +18,8 @@ import Layout from '../components/layout'
 import HeroText from '../components/heroText'
 import Social from '../components/social'
 
-const StyledHero = styled(LazyHero)`
+const StyledHero = styled(Hero)`
   margin-top:-62px;
-  z-index: 2000;
   &>div:nth-child(2) {
     width:80%;
     margin:0 auto;
@@ -52,7 +52,7 @@ const SectionTitle = styled.h2`
 
 const IndexPage = ({data}) => (
   <Layout>
-    <StyledHero imageSrc={Img} minHeight="100vh" opacity={0}>
+    <StyledHero fluid={data.hero.edges[0].node.fluid}>
       <HeroText />
       <Social edges={data.allSocialJson.edges}/>
     </StyledHero>
@@ -70,7 +70,7 @@ const IndexPage = ({data}) => (
     </Section>
     <Section id="technologies">
       <SectionTitle>My Favorite Technologies</SectionTitle>
-      <Technologies edges={data.allImageSharp.edges} />
+      <Technologies edges={data.allLogos.edges} />
     </Section>
     <Section id="certifications" dark>
       <SectionTitle>My Certifications</SectionTitle>
@@ -125,7 +125,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allImageSharp(filter:{original:{src:{regex:"/logo/"}}}) {
+    allLogos: allImageSharp(filter:{original:{src:{regex:"/logo/"}}}, sort:{fields:original___src}) {
       edges {
         node {
           id
