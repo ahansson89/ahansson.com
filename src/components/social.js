@@ -29,9 +29,9 @@ class Social extends React.Component {
 
     return (
       <IconWrapper>
-        <Link to={linkedin.node.url}><LinkedinIcon/></Link>
-        <Link to={github.node.url}><GithubIcon/></Link>
-        <Link to={mail.node.url}><MailIcon/></Link>
+        <Link aria-label={linkedin.node.type} to={linkedin.node.url}><LinkedinIcon/></Link>
+        <Link aria-label={github.node.type} to={github.node.url}><GithubIcon/></Link>
+        <Link aria-label={mail.node.type} to={mail.node.url}><MailIcon/></Link>
       </IconWrapper>
     )
   }
