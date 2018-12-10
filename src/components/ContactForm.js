@@ -55,6 +55,8 @@ const Submit = styled.input`
   font-weight:bold;
   color:#333;
   cursor:pointer;
+  border-radius:0;
+  background-color: #fff;
 `
 
 const Modal = styled.div`
