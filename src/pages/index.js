@@ -135,6 +135,16 @@ export const pageQuery = graphql`
         }
       }
     }
+    hero: allImageSharp(filter:{original:{src:{regex:"/golden-gate/"}}}) {
+      edges {
+        node {
+          id
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
     allEducationJson {
       edges {
         node {
