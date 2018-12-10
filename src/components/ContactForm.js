@@ -17,7 +17,7 @@ const Name = styled.input`
   border:0;
   padding:10px;
   font-family:Arial, sans-serif;
-  color:#aaa;
+  color:#333;
   border:solid 1px #ccc;
   margin:0 0 20px;
   border-radius: 6px;
@@ -28,7 +28,7 @@ const Email = styled.input`
   border:0;
   padding:10px;
   font-family:Arial, sans-serif;
-  color:#aaa;
+  color:#333;
   border:solid 1px #ccc;
   margin:0 0 20px;
   border-radius: 6px;
@@ -39,7 +39,7 @@ const Message = styled.textarea`
   border:0;
   padding:10px;
   font-family:Arial, sans-serif;
-  color:#aaa;
+  color:#333;
   border:solid 1px #ccc;
   margin:0 0 20px;
   border-radius: 6px;
@@ -170,6 +170,7 @@ class ContactForm extends React.Component {
         <Name
           name="name"
           type="text"
+          title="Name"
           placeholder="Full Name"
           value={this.state.name}
           onChange={this.handleInputChange}
@@ -179,6 +180,7 @@ class ContactForm extends React.Component {
         <Email
           name="email"
           type="email"
+          title="Email"
           placeholder="Email"
           value={this.state.email}
           onChange={this.handleInputChange}
@@ -187,6 +189,7 @@ class ContactForm extends React.Component {
         />
         <Message
           name="message"
+          title="Message"
           type="text"
           placeholder="Message"
           value={this.state.message}
