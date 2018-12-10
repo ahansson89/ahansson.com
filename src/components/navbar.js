@@ -22,50 +22,34 @@ const Base = styled.div `
     list-style: none;
     font-size: 13px;
   }
-  & ul > li a,
-  & ul > li {
-    height: 62px;
-    font-size: 11px;
-    float: right;
-    position: relative;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    transition: opacity .3s ease;
-  }
-  & ul > li a {
-    font-family: 'Raleway';
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-right: 32px;
-  }
-  ${props => props.dark && css`
-    background: #fff;
-    & ul > li a,
-    & ul > li {
-      color: #242424;
-      opacity: .6;
-    }
-    & ul > li a:hover {
-      opacity: 1;
-    }
-    a {
-      color: #000;
-    }
-  ` }
-  ${props => props.main && css`
-    background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  ` }
   ${ media.xs`
     & ul {
       display: none;
     }
   ` }
+`
+
+const MenuItem = styled.button`
+   background:none!important;
+   color:inherit;
+   border:none;
+   padding:0!important;
+   font: inherit;
+   cursor: pointer;
+   font-family: 'Raleway';
+   text-transform: uppercase;
+   font-weight: 600;
+   letter-spacing: 1px;
+   margin-right: 32px;
+   &:active, &:focus { outline: none; }
+   height: 62px;
+   font-size: 11px;
+   float: right;
+   position: relative;
+   color: #fff;
+   text-decoration: none;
+   cursor: pointer;
+   transition: opacity .3s ease;
 `
 
 const NavBar = (props) => (
@@ -86,7 +70,7 @@ const NavBar = (props) => (
         <ul>
           {props.menu.map(({node: item}) => (
             <li key={item.id}>
-              <a onClick={() => {scrollToElement(item.link)}}>{item.title}</a>
+              <MenuItem onClick={() => {scrollToElement(item.link)}}>{item.title}</MenuItem>
             </li>
           ))}
         </ul>
