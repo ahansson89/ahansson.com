@@ -43,10 +43,22 @@ const Message = styled.textarea`
   margin:0 0 20px;
   border-radius: 6px;
   width:100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 `
 
 const Submit = styled.input`
+  border:solid 1px #ccc;
+  padding:15px 30px;
+  margin:0 0 20px;
+  text-transform:uppercase;
+  font-weight:bold;
+  color:#333;
+  cursor:pointer;
+  border-radius:0;
+  background-color: #fff;
+`
+
+const ModalButton = styled.button`
   border:solid 1px #ccc;
   padding:15px 30px;
   margin:0 0 20px;
@@ -207,7 +219,7 @@ class ContactForm extends React.Component {
           <p>
             Thank you for reaching out. I will get back to you as soon as possible.
           </p>
-          <button onClick={this.closeModal}>Okay</button>
+          <ModalButton onClick={this.closeModal}>Okay</ModalButton>
         </Modal>
       </Form>
     )
