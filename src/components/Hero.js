@@ -9,7 +9,6 @@ const Container = styled.div`
 `
 
 const Overlay = styled.div`
-  height:100vh;
   width:80%;
   text-align: center;
   margin: 0px auto;
