@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Flex, Box} from 'grid-styled'
 import scrollToElement from 'scroll-to-element'
 
-import Name from './name'
+import Name from './Name'
 
 import { media } from '../utils/style'
 
