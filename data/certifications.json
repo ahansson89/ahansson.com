@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Certified Solutions Architect Professional",
+    "authority": "Amazon Web Services",
+    "start": "Oct 2018",
+    "end": "Oct 2020"
+  },
+  {
+    "name": "Certified DevOps Engineer Professional",
+    "authority": "Amazon Web Services",
+    "start": "Nov 2018",
+    "end": "Nov 2020"
+  },
+  {
+    "name": "Certified Cloud Architect Professional",
+    "authority": "Google Cloud Platform",
+    "start": "Dec 2017",
+    "end": "Dec 2019"
+  },
+  {
+    "name": "Certified MuleSoft Developer",
+    "authority": "MuleSoft",
+    "start": "May 2017",
+    "end": "May 2019"
+  }
+]
