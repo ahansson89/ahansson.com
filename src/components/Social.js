@@ -4,6 +4,8 @@ import { Envelope as MailIcon } from 'styled-icons/fa-solid/Envelope.cjs'
 import { LinkedinIn as LinkedinIcon } from 'styled-icons/fa-brands/LinkedinIn.cjs'
 import { Github as GithubIcon } from 'styled-icons/fa-brands/Github.cjs'
 import Link from './Link'
+import ButtonLink from './ButtonLink'
+import scrollToElement from 'scroll-to-element'
 
 const IconWrapper = styled.div`
   position:absolute;
@@ -31,7 +33,7 @@ class Social extends React.Component {
       <IconWrapper>
         <Link aria-label={linkedin.node.type} to={linkedin.node.url}><LinkedinIcon/></Link>
         <Link aria-label={github.node.type} to={github.node.url}><GithubIcon/></Link>
-        <Link aria-label={mail.node.type} to={mail.node.url}><MailIcon/></Link>
+        <ButtonLink onClick={() => {scrollToElement(mail.node.url)}}><MailIcon/></ButtonLink>
       </IconWrapper>
     )
   }
