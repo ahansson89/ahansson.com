@@ -1,19 +1,13 @@
 import React from 'react'
-import Layout from '../components/Layout'
-
 import {graphql} from 'gatsby'
 import styled from 'styled-components'
+import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-
 import HeroText from '../components/HeroText'
 import Social from '../components/Social'
 
 const StyledHero = styled(Hero)`
   margin-top:-62px;
-  &>div:nth-child(2) {
-    width:80%;
-    margin:0 auto;
-  }
 `
 
 const NotFoundPage = ({data}) => (

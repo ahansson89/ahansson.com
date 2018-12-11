@@ -9,19 +9,14 @@ import Technologies from '../components/Technologies'
 import Educations from '../components/Educations'
 import ContactForm from '../components/ContactForm'
 import Hero from '../components/Hero'
-
-import { media } from '../utils/style'
-
 import Layout from '../components/Layout'
 import HeroText from '../components/HeroText'
 import Social from '../components/Social'
 
+import { media } from '../utils/style'
+
 const StyledHero = styled(Hero)`
   margin-top:-62px;
-  &>div:nth-child(2) {
-    width:80%;
-    margin:0 auto;
-  }
 `
 
 const Section = styled.div`
@@ -53,6 +48,7 @@ const SectionTitle = styled.h2`
 
 const IndexPage = ({data}) => (
   <Layout>
+
     <StyledHero fluid={data.hero.edges[0].node.fluid}>
       <HeroText />
       <Social edges={data.allSocialJson.edges}/>
