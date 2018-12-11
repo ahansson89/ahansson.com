@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Flex, Box} from 'grid-styled'
 import scrollToElement from 'scroll-to-element'
+import ButtonLink from './ButtonLink'
 
 import Name from './Name'
 
@@ -37,19 +38,12 @@ const NameBox = styled(Box)`
   ` }
 `
 
-const MenuItem = styled.button`
-   background:none!important;
-   color:inherit;
-   border:none;
-   padding:0!important;
-   font: inherit;
-   cursor: pointer;
+const MenuItem = styled(ButtonLink)`
    font-family: 'Raleway';
    text-transform: uppercase;
    font-weight: 600;
    letter-spacing: 1px;
    margin-right: 32px;
-   &:active, &:focus { outline: none; }
    height: 62px;
    font-size: 11px;
    float: right;
