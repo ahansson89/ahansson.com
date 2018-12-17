@@ -76,7 +76,12 @@ const NavBar = (props) => (
           <ul>
             {props.menu.map(({node: item}) => (
               <li key={item.id}>
-                <MenuItem onClick={() => {scrollToElement(item.link)}}>{item.title}</MenuItem>
+                <MenuItem
+                  onClick={() => {scrollToElement(item.link)}}
+                  aria-label={item.title}
+                >
+                  {item.title}
+                </MenuItem>
               </li>
             ))}
           </ul>
