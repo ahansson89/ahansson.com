@@ -28,7 +28,7 @@ export const pageQuery = graphql`
         node {
           id
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

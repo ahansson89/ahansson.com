@@ -127,7 +127,7 @@ export const pageQuery = graphql`
         node {
           id
           fixed(height: 80, grayscale:true) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
@@ -137,7 +137,7 @@ export const pageQuery = graphql`
         node {
           id
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
