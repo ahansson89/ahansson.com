@@ -33,7 +33,7 @@ class Social extends React.Component {
       <IconWrapper>
         <Link aria-label={linkedin.node.type} to={linkedin.node.url}><LinkedinIcon/></Link>
         <Link aria-label={github.node.type} to={github.node.url}><GithubIcon/></Link>
-        <ButtonLink onClick={() => {scrollToElement(mail.node.url)}}><MailIcon/></ButtonLink>
+        <ButtonLink aria-label={github.node.type} onClick={() => {scrollToElement(mail.node.url)}}><MailIcon/></ButtonLink>
       </IconWrapper>
     )
   }
