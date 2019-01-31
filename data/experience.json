@@ -1,12 +1,21 @@
 [
   {
+    "company": "Mission Cloud",
+    "title": "Senior Solutions Architect",
+    "bullets": [
+      "Helping businesses to turn unrealistic or impractical goals into achievable realities"
+    ],
+    "start": "January 2019",
+    "end": "Present"
+  },
+  {
     "company": "General Datatech",
     "title": "Cloud Solutions Architect",
     "bullets": [
       "Consulting businesses on how to succeed in their cloud journeys while achieving operational excellence"
     ],
     "start": "Apr 2018",
-    "end": "Present"
+    "end": "January 2019"
   },
   {
     "company": "Capgemini - Financial Services",
