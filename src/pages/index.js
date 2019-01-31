@@ -57,7 +57,7 @@ const IndexPage = ({data}) => (
       <h1>About Me</h1>
       <Flex alignItems='center' flexDirection='column'>
         <Box px={2} width={[ 1 , 1 / 2 ]}>
-          <p>Currently working as a Cloud Architect at <Link to='https://gdt.com'>GDT</Link> helping our customers with various problems related to doing business in the cloud. I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach. Riding my mountain bike is what I do for fun.</p>
+          <p>Currently working as a Senior Cloud Architect at <Link to='https://missioncloud.com'>Mission Cloud</Link>, helping our customers with various problems related to doing business in the cloud. I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodologies to a modern approaches. Riding my mountain bike is what I do for fun.</p>
         </Box>
       </Flex>
     </Section>
