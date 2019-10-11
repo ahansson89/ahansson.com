@@ -10,59 +10,70 @@ import 'whatwg-fetch' // Fetch Polyfill
 */
 
 const Form = styled.form`
-border:0;
-padding:10px;
-color:#333;
-border:solid 1px #ccc;
-margin:0 0 20px;
-border-radius: 6px;
-width:100%;
-box-sizing: border-box;
+  border: 0;
+  padding: 10px;
+  color: #333;
+  border: solid 1px #ccc;
+  margin: 0 0 20px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+`
+
+const Name = styled.input`
+  border: 0;
+  padding: 10px;
+  color: #333;
+  border: solid 1px #ccc;
+  margin: 0 0 20px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
 `
 
 const Email = styled.input`
-  border:0;
-  padding:10px;
-  color:#333;
-  border:solid 1px #ccc;
-  margin:0 0 20px;
+  border: 0;
+  padding: 10px;
+  color: #333;
+  border: solid 1px #ccc;
+  margin: 0 0 20px;
   border-radius: 6px;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
 `
 
 const Message = styled.textarea`
-  border:0;
-  padding:10px;
-  color:#333;
-  border:solid 1px #ccc;
-  margin:0 0 20px;
+  border: 0;
+  padding: 10px;
+  color: #333;
+  border: solid 1px #ccc;
+  margin: 0 0 20px;
   border-radius: 6px;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
 `
 
 const Submit = styled.input`
-  border:solid 1px #ccc;
-  padding:15px 30px;
-  margin:0 0 20px;
-  text-transform:uppercase;
-  font-weight:bold;
-  color:#333;
-  cursor:pointer;
-  border-radius:0;
+  border: solid 1px #ccc;
+  padding: 15px 30px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0;
   background-color: #fff;
 `
 
 const ModalButton = styled.button`
-  border:solid 1px #ccc;
-  padding:15px 30px;
-  margin:0 0 20px;
-  text-transform:uppercase;
-  font-weight:bold;
-  color:#333;
-  cursor:pointer;
-  border-radius:0;
+  border: solid 1px #ccc;
+  padding: 15px 30px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0;
   background-color: #fff;
 `
 
@@ -90,13 +101,13 @@ const Modal = styled.div`
 `
 
 const ModalOverlay = styled.div`
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
   position: fixed;
   z-index: 1000;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
 `
@@ -115,7 +126,7 @@ class ContactForm extends React.Component {
       email: '',
       message: '',
       showModal: false,
-      submitting: false
+      submitting: false,
     }
   }
 
@@ -130,7 +141,7 @@ class ContactForm extends React.Component {
 
   handleSubmit = event => {
     this.setState({
-      submitting: true
+      submitting: true,
     })
     fetch('/', {
       method: 'POST',
@@ -207,13 +218,17 @@ class ContactForm extends React.Component {
         <Submit
           name="submit"
           type="submit"
-          value={this.state.submitting ? "Sending..." : "Send"}
+          value={this.state.submitting ? 'Sending...' : 'Send'}
           disabled={this.state.submitting}
         />
-        <ModalOverlay onClick={this.closeModal} visible={this.state.showModal} />
+        <ModalOverlay
+          onClick={this.closeModal}
+          visible={this.state.showModal}
+        />
         <Modal visible={this.state.showModal}>
           <p>
-            Thank you for reaching out. I will get back to you as soon as possible.
+            Thank you for reaching out. I will get back to you as soon as
+            possible.
           </p>
           <ModalButton onClick={this.closeModal}>Okay</ModalButton>
         </Modal>
