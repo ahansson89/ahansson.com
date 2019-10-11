@@ -9,16 +9,7 @@ import 'whatwg-fetch' // Fetch Polyfill
   https://www.netlify.com/docs/form-handling/
 */
 
-const Form = styled.form`
-  border: 0;
-  padding: 10px;
-  color: #333;
-  border: solid 1px #ccc;
-  margin: 0 0 20px;
-  border-radius: 6px;
-  width: 100%;
-  box-sizing: border-box;
-`
+const Form = styled.form``
 
 const Name = styled.input`
   border: 0;
