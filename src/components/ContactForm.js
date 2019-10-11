@@ -10,18 +10,14 @@ import 'whatwg-fetch' // Fetch Polyfill
 */
 
 const Form = styled.form`
-
-`
-
-const Name = styled.input`
-  border:0;
-  padding:10px;
-  color:#333;
-  border:solid 1px #ccc;
-  margin:0 0 20px;
-  border-radius: 6px;
-  width:100%;
-  box-sizing: border-box;
+border:0;
+padding:10px;
+color:#333;
+border:solid 1px #ccc;
+margin:0 0 20px;
+border-radius: 6px;
+width:100%;
+box-sizing: border-box;
 `
 
 const Email = styled.input`
