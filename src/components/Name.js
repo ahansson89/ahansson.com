@@ -1,6 +1,6 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
-import Pattern from '../images/pattern.gif'
+import React from 'react';
+import styled, { css } from 'styled-components';
+import Pattern from '../images/pattern.gif';
 
 const Base = styled.a`
   font-size: 20pt;
@@ -19,28 +19,26 @@ const Base = styled.a`
     text-decoration: none;
     -webkit-transform:rotate(354deg);
   }
-  ${props => props.dark && css`
-    color: #444;
-  `}
-  ${props => props.block && css`
-    display: block;
-  `}
-  ${props => props.small && css`
-    font-size: 1em;
-  `}
-  ${props => props.big && css`
-    font-size: 2em;
-  `}
-`
+  ${(props) => props.dark
+    && css`
+      color: #444;
+    `}
+  ${(props) => props.block
+    && css`
+      display: block;
+    `}
+  ${(props) => props.small
+    && css`
+      font-size: 1em;
+    `}
+  ${(props) => props.big
+    && css`
+      font-size: 2em;
+    `}
+`;
 
-class Name extends React.Component {
-  render() {
-    return (
-      <Base {...this.props} href='/'>
-        Aleksander Hansson
-      </Base>
-    );
-  }
+function Name() {
+  return <Base href="/">Aleksander Hansson</Base>;
 }
 
-export default Name
+export default Name;

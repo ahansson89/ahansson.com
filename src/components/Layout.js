@@ -1,15 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import styled, { createGlobalStyle } from 'styled-components'
-import reset from 'styled-reset'
-import styledNormalize from 'styled-normalize'
-import "typeface-pacifico"
-import "typeface-raleway"
-import "typeface-open-sans"
+import React from 'react';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import styled, { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+import styledNormalize from 'styled-normalize';
+import 'typeface-pacifico';
+import 'typeface-raleway';
+import 'typeface-open-sans';
 
-import Navbar from './Navbar'
+import Navbar from './Navbar';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -42,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     color: #292929;
   }
 
-`
+`;
 
 const Body = styled.div`
   display: flex;
@@ -53,25 +52,24 @@ const Body = styled.div`
   img {
     margin-bottom: 0;
   }
-`
+`;
 
 const Footer = styled.footer`
-
   display: flex;
   flex-direction: column;
   width: 100vw;
-  text-align:center;
-  color:#fff;
-  background-color:#000;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
   img {
     margin-bottom: 0;
   }
-`
+`;
 
 const FooterText = styled.div`
-  font-size:0.7em;
+  font-size: 0.7em;
   padding: 3em;
-`
+`;
 
 const Layout = ({ children, noMenu }) => (
   <StaticQuery
@@ -82,42 +80,37 @@ const Layout = ({ children, noMenu }) => (
             title
           }
         }
-      	allMenuJson {
-      	  edges {
-      	    node {
-      	      title
+        allMenuJson {
+          edges {
+            node {
+              title
               link
               id
-      	    }
-      	  }
-      	}
+            }
+          }
+        }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Body>
           <GlobalStyle />
-          <Helmet
-            title={data.site.siteMetadata.title}
-          >
+          <Helmet title={data.site.siteMetadata.title}>
             <html lang="en" />
-            <meta name="description" content="I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"/>
+            <meta
+              name="description"
+              content="I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"
+            />
           </Helmet>
-          <Navbar menu={data.allMenuJson.edges} noMenu={noMenu}/>
-            {children}
+          <Navbar menu={data.allMenuJson.edges} noMenu={noMenu} />
+          {children}
           <Footer>
-            <FooterText>
-              ahansson.com
-            </FooterText>
+            <FooterText>ahansson.com</FooterText>
           </Footer>
         </Body>
       </>
     )}
   />
-)
+);
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+export default Layout;

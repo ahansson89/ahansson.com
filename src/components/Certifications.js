@@ -1,57 +1,60 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { media } from '../utils/style'
+import media from '../utils/style';
 
 const Item = styled.div`
   width: 60%;
   margin: 0 auto;
   margin-bottom: 1.5em;
-`
+`;
 
 const Name = styled.h3`
-  display:block;
+  display: block;
   letter-spacing: 2px;
   font-weight: 700;
   float: left;
-  ${ media.xs`
+  ${media.xs`
     float:none;
-  ` }
-`
+  `}
+`;
 
 const Duration = styled.div`
-  display:block;
+  display: block;
   float: right;
-  clear:both;
-  ${ media.xs`
+  clear: both;
+  ${media.xs`
     float:none;
-  ` }
-`
+  `}
+`;
 
 const Authority = styled.div`
-  display:block;
-  clear:both;
+  display: block;
+  clear: both;
   text-align: left;
-  ${ media.xs`
+  ${media.xs`
     text-align:center;
-  ` }
-`
+  `}
+`;
 
-class Certifications extends React.Component {
-  render() {
-    const { edges } = this.props
-    return (
-      <>
-        {edges.map(({node: item}) => (
-          <Item key={item.id}>
-            <Duration>{item.start} - {item.end}</Duration>
-            <Name>{item.name}</Name>
-            <Authority>{item.authority}</Authority>
-          </Item>
-        ))}
-      </>
-    )
-  }
+function Certifications(props) {
+  const { edges } = props;
+  return (
+    <>
+      {edges.map(({ node: item }) => (
+        <Item key={item.id}>
+          <Duration>
+            {item.start}
+            {' '}
+-
+            {item.end}
+          </Duration>
+          <Name>{item.name}</Name>
+          <Authority>{item.authority}</Authority>
+        </Item>
+      ))}
+    </>
+  );
 }
 
-export default Certifications
+export default Certifications;
