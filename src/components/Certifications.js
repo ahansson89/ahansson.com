@@ -45,8 +45,7 @@ function Certifications(props) {
         <Item key={item.id}>
           <Duration>
             {item.start}
-            {' '}
--
+            {' - '}
             {item.end}
           </Duration>
           <Name>{item.name}</Name>

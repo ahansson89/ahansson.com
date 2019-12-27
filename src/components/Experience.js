@@ -45,8 +45,7 @@ function Experience(props) {
         <Item key={item.id}>
           <Duration>
             {item.start}
-            {' '}
--
+            {' - '}
             {item.end}
           </Duration>
           <Company>{item.company}</Company>

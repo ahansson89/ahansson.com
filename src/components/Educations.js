@@ -45,8 +45,7 @@ function Educations(props) {
         <Item key={item.id}>
           <Duration>
             {item.start}
-            {' '}
--
+            {' - '}
             {item.end}
           </Duration>
           <Program>{item.program}</Program>
