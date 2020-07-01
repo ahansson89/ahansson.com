@@ -37,24 +37,22 @@ function HeroText(props) {
   return (
     <StyledTypist cursor={{ show: false }}>
       <strong key={1}>I</strong>
-      {' '}
-Make Fast Web Apps
+      <span key={2}> Make Fast Web Apps</span>
       <Typist.Backspace count={19} delay={1000} />
-      <span key={2}> Architect Complex IT Systems</span>
+      <span key={3}> Architect Complex IT Systems</span>
       <Typist.Backspace count={29} delay={1000} />
-      <span key={3}> Am Certified In Amazon Web Services & Google Cloud Platform</span>
+      <span key={4}> Am Certified In Amazon Web Services & Google Cloud Platform</span>
       <Typist.Backspace count={60} delay={1000} />
-      <span key={4}> Live In The Bay Area</span>
+      <span key={5}> Live In The Bay Area</span>
       <Typist.Delay ms={300} />
-      <span key={5}>.</span>
-      <Typist.Delay ms={600} />
       <span key={6}>.</span>
-      <Typist.Delay ms={900} />
+      <Typist.Delay ms={600} />
       <span key={7}>.</span>
+      <Typist.Delay ms={900} />
+      <span key={8}>.</span>
       <Typist.Backspace count={25} delay={10} />
-      <strong key={8}>But Mostly I Just</strong>
-      {' '}
-Do Awesome Stuff With Technology
+      <strong key={9}>But Mostly I Just</strong>
+      <span key={10}> Do Awesome Stuff With Technology</span>
     </StyledTypist>
   );
 }
