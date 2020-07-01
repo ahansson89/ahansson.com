@@ -56,8 +56,8 @@ const IndexPage = ({ data }) => (
             business in the cloud. I care deeply about serverless and modern application development
             and continuously find ways to help my clients unlock value by switching from old
             development methodologies to current approaches. Besides that, I consult on best
-            practices on AWS, including Cost Optimization, DevOps, Migrations and Security. Riding
-            my mountain bike is one thing I do for fun.
+            practices on public cloud, including Cost Optimization, DevOps, Migrations and Security.
+            Riding my mountain bike is one thing I do for fun.
           </p>
         </Box>
       </Flex>
