@@ -1,5 +1,29 @@
 [
   {
+    "name": "Certified Professional Cloud Architect",
+    "authority": "Google Cloud Platform",
+    "start": "Dec 2017",
+    "end": "Dec 2022"
+  },
+  {
+    "name": "Certified Professional DevOps Engineer",
+    "authority": "Google Cloud Platform",
+    "start": "Dec 2020",
+    "end": "Dec 2022"
+  },
+  {
+    "name": "Certified Professional Data Engineer",
+    "authority": "Google Cloud Platform",
+    "start": "Jan 2021",
+    "end": "Jan 2023"
+  },
+  {
+    "name": "Certified Associate Cloud Engineer",
+    "authority": "Google Cloud Platform",
+    "start": "Dec 2020",
+    "end": "Dec 2022"
+  },
+  {
     "name": "Certified Security - Specialty",
     "authority": "Amazon Web Services",
     "start": "Dec 2019",
@@ -34,11 +58,5 @@
     "authority": "Amazon Web Services",
     "start": "Sep 2017",
     "end": "Nov 2021"
-  },
-  {
-    "name": "Certified Cloud Architect - Professional",
-    "authority": "Google Cloud Platform",
-    "start": "Dec 2017",
-    "end": "Dec 2019"
   }
 ]
