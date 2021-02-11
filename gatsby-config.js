@@ -51,9 +51,9 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-eslint',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
+    { resolve: 'gatsby-plugin-eslint' },
   ],
 };
