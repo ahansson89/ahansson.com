@@ -76,8 +76,8 @@ const Modal = styled.div`
   flex-flow: column;
   align-items: flex-start;
   transition: 0.2s all;
-  opacity: ${(props) => (props.visible ? '1' : '0')};
-  visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
+  opacity: ${props => (props.visible ? '1' : '0')};
+  visibility: ${props => (props.visible ? 'visible' : 'hidden')};
   p {
     line-height: 1.6;
     margin: 0 0 2em 0;
@@ -92,13 +92,14 @@ const ModalOverlay = styled.div`
   position: fixed;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.3);
-  opacity: ${(props) => (props.visible ? '1' : '0')};
-  visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
+  opacity: ${props => (props.visible ? '1' : '0')};
+  visibility: ${props => (props.visible ? 'visible' : 'hidden')};
 `;
 
-const encode = (data) => Object.keys(data)
-  .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-  .join('&');
+const encode = data =>
+  Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -112,16 +113,16 @@ class ContactForm extends React.Component {
     };
   }
 
-  handleInputChange = (event) => {
+  handleInputChange = event => {
     const { target } = event;
     const { value } = target;
     const { name } = target;
     this.setState({
       [name]: value,
     });
-  }
+  };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     this.setState({
       submitting: true,
     });
@@ -131,9 +132,9 @@ class ContactForm extends React.Component {
       body: encode({ 'form-name': 'contact', ...this.state }),
     })
       .then(this.handleSuccess)
-      .catch((error) => alert(error));
+      .catch(error => alert(error));
     event.preventDefault();
-  }
+  };
 
   handleSuccess = () => {
     this.setState({
@@ -143,16 +144,14 @@ class ContactForm extends React.Component {
       showModal: true,
       submitting: false,
     });
-  }
+  };
 
   closeModal = () => {
     this.setState({ showModal: false });
-  }
+  };
 
   render() {
-    const {
-      name, email, message, showModal, submitting,
-    } = this.props;
+    const { name, email, message, showModal, submitting } = this.props;
     return (
       <Form
         name="contact"
@@ -164,8 +163,7 @@ class ContactForm extends React.Component {
       >
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
-          Don’t fill this out:
-          {' '}
+          Don’t fill this out:{' '}
           <input name="bot" onChange={this.handleInputChange} />
         </p>
 
@@ -207,7 +205,10 @@ class ContactForm extends React.Component {
         />
         <ModalOverlay onClick={this.closeModal} visible={showModal} />
         <Modal visible={showModal}>
-          <p>Thank you for reaching out. I will get back to you as soon as possible.</p>
+          <p>
+            Thank you for reaching out. I will get back to you as soon as
+            possible.
+          </p>
           <ModalButton onClick={this.closeModal}>Okay</ModalButton>
         </Modal>
       </Form>

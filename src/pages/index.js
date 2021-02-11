@@ -18,8 +18,9 @@ const Section = styled.div`
   text-align: center;
   padding-top: 45px;
   padding-bottom: 40px;
-  ${(props) => props.dark
-    && css`
+  ${props =>
+    props.dark &&
+    css`
       background: #292929;
       h2 {
         color: #fff;
@@ -52,11 +53,13 @@ const IndexPage = ({ data }) => (
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>
           <p>
-            I am a Cloud Solutions Architect. I help clients with various problems related to doing
-            business in the cloud. I care deeply about serverless and modern application development
-            and continuously find ways to help my clients unlock value by switching from old
-            development methodologies to current approaches. Besides that, I consult on best
-            practices on public cloud, including Cost Optimization, DevOps, Migrations and Security.
+            I am a Cloud Solutions Architect. I help clients with various
+            problems related to doing business in the cloud. I care deeply about
+            serverless and modern application development and continuously find
+            ways to help my clients unlock value by switching from old
+            development methodologies to current approaches. I consult on best
+            practices on public cloud, including Cost Optimization, Cloud Native
+            Development, DevOps, Data &amp; Analytics, Migrations and Security.
             Riding my mountain bike is one thing I do for fun.
           </p>
         </Box>
@@ -136,7 +139,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    hero: allImageSharp(filter: { original: { src: { regex: "/golden-gate/" } } }) {
+    hero: allImageSharp(
+      filter: { original: { src: { regex: "/golden-gate/" } } }
+    ) {
       edges {
         node {
           id
