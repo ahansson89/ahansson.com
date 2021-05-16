@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Pattern from '../images/pattern.gif';
+
 
 const Base = styled.a`
   font-size: 30pt;
