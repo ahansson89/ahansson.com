@@ -24,7 +24,7 @@ export default NotFoundPage;
 export const pageQuery = graphql`
   query notFoundQuery {
     hero: allImageSharp(
-      filter: { original: { src: { regex: "/golden-gate/" } } }
+      filter: { original: { src: { regex: "/seashore/" } } }
     ) {
       edges {
         node {
