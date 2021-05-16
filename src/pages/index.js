@@ -1,9 +1,11 @@
 import React from 'react';
-import Img from "gatsby-image"
 import { graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
 import { Flex, Box } from 'grid-styled';
+import { Parallax, Background } from 'react-parallax';
+
 import Experience from '../components/Experience';
+import About from '../components/About';
 import Certifications from '../components/Certifications';
 import Languages from '../components/Languages';
 import Projects from '../components/Projects';
@@ -13,6 +15,7 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import HeroText from '../components/HeroText';
 import Social from '../components/Social';
+
 
 import media from '../utils/style';
 
@@ -44,81 +47,30 @@ const SectionTitle = styled.h2`
   `}
 `;
 
-const Paragraph = styled.p`
-   margin: 1rem 0;
-   text-align: start;
-   ${media.md`
-     text-align: center;
+const ParallaxImage = styled.img`
+  ${media.xs`
+    left: 0%;
   `}
 `;
 
-const Avatar = styled(Img)`
-  flex-basis:33.33%;
-  margin: 0 0 0 5rem;
-  height: 350px;
-  width: 350px;
-  ${media.md`
-    flex-basis: 100%;
-    height: 250px;
-    width: 250px;
-  `}
-`;
+const IndexPage = ({ data }) => {
 
-const About = styled.div`
-   display: flex;
-   flex-direction: row;
-   justify-content:center;
-   margin 0 auto;
-   max-width: 1200px;
-  ${media.md`
-    flex-direction: column;
-  `}
-`;
-
-const Description = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-basis:66.66%;
-  padding: 0 5rem;
-  ${media.md`
-    flex-basis: 100%;
-  `}
-`;
-
-const IndexPage = ({ data }) => (
-  <Layout>
+  return (<Layout>
     <Hero fluid={data.hero.edges[0].node.fluid}>
       <HeroText />
       <Social edges={data.allSocialJson.edges}/>
     </Hero>
     <Section id="about-me">
       <h1>About Me</h1>
-      <About>
-        <Avatar fluid={data.me.edges[0].node.fluid} imgStyle={{ objectFit: "contain" }}/>
-        <Description>
-          <Paragraph>
-          After graduating in Biological Sciences I am currently doing 
-          my master's degree in Marine Sciences to pursue my dream of becoming a marine biologist.
-          </Paragraph>
-          <Paragraph>
-          My research interests are wide and include marine biology and ecology, 
-          marine conservation and the effects of climate change on the marine environment. 
-          </Paragraph>
-          <Paragraph>
-          In my future career, I would like to combine my passion for the ocean with 
-          the field of science communication through video making and editing.
-          </Paragraph>
-          <Paragraph>
-          I am moved by a strong will to learn and get involved by always giving my best. 
-          Some of my distinctive skills include motivation and commitment, as well as adaptability, time management and planning.   
-          </Paragraph>
-        </Description>
-      </About>
+      <About fluid={data.me.edges[0].node.fluid}/>
     </Section>
     <Section id="experience" dark>
       <SectionTitle>My Experience</SectionTitle>
       <Experience edges={data.allExperienceJson.edges} />
     </Section>
+    <Parallax bgImage={data.fieldwork.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
+      <div style={{ height: '750px' }} />
+    </Parallax>
     <Section id="education">
       <SectionTitle>My Education</SectionTitle>
       <Educations edges={data.allEducationJson.edges} />
@@ -127,6 +79,9 @@ const IndexPage = ({ data }) => (
       <SectionTitle>My Certifications</SectionTitle>
       <Certifications edges={data.allCertificationsJson.edges} />
     </Section>
+    <Parallax bgImage={data.snorkeling.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
+      <div style={{ height: '750px' }} />
+    </Parallax>
     <Section id="volunteering">
       <SectionTitle>My Volunteering</SectionTitle>
       <Educations edges={data.allVolunteeringJson.edges} />
@@ -148,8 +103,8 @@ const IndexPage = ({ data }) => (
       </Flex>
     </Section>
   </Layout>
-);
-
+  )
+}
 export default IndexPage;
 
 export const pageQuery = graphql`
@@ -214,6 +169,30 @@ export const pageQuery = graphql`
         node {
           id
           fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    fieldwork: allImageSharp(
+      filter: { original: { src: { regex: "/fieldwork/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 1280) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    snorkeling: allImageSharp(
+      filter: { original: { src: { regex: "/snorkeling/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 1280) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

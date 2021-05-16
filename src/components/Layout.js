@@ -42,6 +42,12 @@ const GlobalStyle = createGlobalStyle`
     color: #292929;
   }
 
+  @media only screen and (max-width: 800px) {
+    .parallax-img {
+      left: 0% !important;
+    }
+  }
+
 `;
 
 const Body = styled.div`
