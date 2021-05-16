@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from "gatsby-image"
 import { graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
 import { Flex, Box } from 'grid-styled';
@@ -45,18 +46,42 @@ const SectionTitle = styled.h2`
 
 const Paragraph = styled.p`
    margin: 1rem 0;
+   text-align: start;
+`;
+
+const Avatar = styled(Img)`
+  flex-basis:33.33%;
+  margin: 0 0 0 5rem;
+  height: 350px;
+  width: 350px;
+`;
+
+const About = styled.div`
+   display: flex;
+   flex-direction: row;
+   justify-content:center;
+  margin 0 auto;
+  max-width: 1200px;
+`;
+
+const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-basis:66.66%;
+  padding: 0 5rem;
 `;
 
 const IndexPage = ({ data }) => (
   <Layout>
     <Hero fluid={data.hero.edges[0].node.fluid}>
       <HeroText />
-      <Social edges={data.allSocialJson.edges} />
+      <Social edges={data.allSocialJson.edges}/>
     </Hero>
     <Section id="about-me">
       <h1>About Me</h1>
-      <Flex alignItems="center" flexDirection="column">
-        <Box px={2} width={[1, 1 / 2]}>
+      <About>
+        <Avatar fluid={data.me.edges[0].node.fluid} imgStyle={{ objectFit: "contain" }}/>
+        <Description>
           <Paragraph>
           After graduating in Biological Sciences I am currently doing 
           my master's degree in Marine Sciences to pursue my dream of becoming a marine biologist.
@@ -73,8 +98,8 @@ const IndexPage = ({ data }) => (
           I am moved by a strong will to learn and get involved by always giving my best. 
           Some of my distinctive skills include motivation and commitment, as well as adaptability, time management and planning.   
           </Paragraph>
-        </Box>
-      </Flex>
+        </Description>
+      </About>
     </Section>
     <Section id="experience" dark>
       <SectionTitle>My Experience</SectionTitle>
@@ -156,19 +181,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    allLogos: allImageSharp(
-      filter: { original: { src: { regex: "/logo/" } } }
-      sort: { fields: original___src }
-    ) {
-      edges {
-        node {
-          id
-          fixed(height: 80, grayscale: true) {
-            ...GatsbyImageSharpFixed_withWebp_tracedSVG
-          }
-        }
-      }
-    }
     hero: allImageSharp(
       filter: { original: { src: { regex: "/seashore/" } } }
     ) {
@@ -176,6 +188,18 @@ export const pageQuery = graphql`
         node {
           id
           fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    me: allImageSharp(
+      filter: { original: { src: { regex: "/me/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
