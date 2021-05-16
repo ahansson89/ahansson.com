@@ -11,13 +11,6 @@ const Base = styled.a`
   white-space: nowrap;
   transition-property: transform;
   transition-duration: 0.8s;
-  &:hover {
-    cursor: pointer;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: url(${Pattern});
-    text-decoration: none;
-  }
   ${(props) => props.dark
     && css`
       color: #444;
