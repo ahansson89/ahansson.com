@@ -47,6 +47,9 @@ const SectionTitle = styled.h2`
 const Paragraph = styled.p`
    margin: 1rem 0;
    text-align: start;
+   ${media.md`
+     text-align: center;
+  `}
 `;
 
 const Avatar = styled(Img)`
@@ -54,14 +57,22 @@ const Avatar = styled(Img)`
   margin: 0 0 0 5rem;
   height: 350px;
   width: 350px;
+  ${media.md`
+    flex-basis: 100%;
+    height: 250px;
+    width: 250px;
+  `}
 `;
 
 const About = styled.div`
    display: flex;
    flex-direction: row;
    justify-content:center;
-  margin 0 auto;
-  max-width: 1200px;
+   margin 0 auto;
+   max-width: 1200px;
+  ${media.md`
+    flex-direction: column;
+  `}
 `;
 
 const Description = styled.div`
@@ -69,6 +80,9 @@ const Description = styled.div`
   flex-direction: column;
   flex-basis:66.66%;
   padding: 0 5rem;
+  ${media.md`
+    flex-basis: 100%;
+  `}
 `;
 
 const IndexPage = ({ data }) => (

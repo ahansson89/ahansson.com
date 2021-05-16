@@ -23,21 +23,5 @@
     "start": "2015",
     "end": "2018",
     "description": "Modules: Organic, Inorganic and Biological Chemistry, Physics, Mathematics and Statistics, Cytology and Anatomy, Zoology, Botany, Ecology, Molecular and Cellular Biology, Genetics, Animal and Plant Physiology, Microbiology and Immunology."
-  },
-  {
-    "school": "Hunters Hill High School",
-    "location": "Sydney, Australia",
-    "program": "High school trimester abroad",
-    "start": "2013",
-    "end": "2013",
-    "description": "Modules: English, Mathematics, Photography, PDHPE, Modern History, Creative Arts"
-  },
-  {
-    "school": "Liceo Linguistico Alessandro Manzoni",
-    "location": "Milan, Italy",
-    "program": "High school diploma",
-    "start": "2010",
-    "end": "2015",
-    "description": "Modules: Foreign languages and literatures (English, Spanish and Chinese)"
   }
 ]
