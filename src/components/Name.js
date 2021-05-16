@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components';
 import Pattern from '../images/pattern.gif';
 
 const Base = styled.a`
-  font-size: 20pt;
-  font-family: 'Pacifico', cursive;
+  font-size: 30pt;
+  font-family: 'Allura', cursive;
   color: #fff;
   margin: 20px 0;
   width: fit-content;
@@ -38,7 +38,7 @@ const Base = styled.a`
 `;
 
 function Name() {
-  return <Base href="/">Aleksander Hansson</Base>;
+  return <Base href="/">Aileen Roncoroni</Base>;
 }
 
 export default Name;

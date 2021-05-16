@@ -25,6 +25,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-typist": "^2.0.4",
+    "react-world-flags": "^1.4.0",
     "scroll-to-element": "^2.0.2",
     "styled-components": "^4.1.2",
     "styled-icons": "^5.3.0",
@@ -62,6 +63,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  }
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-default.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default/issues"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-default#readme",
+  "main": "gatsby-browser.js"
 }

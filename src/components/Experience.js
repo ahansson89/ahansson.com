@@ -6,17 +6,7 @@ import media from '../utils/style';
 const Item = styled.div`
   width: 60%;
   margin: 0 auto;
-  margin-bottom: 1.5em;
-`;
-
-const Company = styled.h3`
-  display: block;
-  letter-spacing: 2px;
-  font-weight: 700;
-  float: left;
-  ${media.xs`
-    float:none;
-  `}
+  margin-bottom: 2.5em;
 `;
 
 const Duration = styled.div`
@@ -28,7 +18,17 @@ const Duration = styled.div`
   `}
 `;
 
-const Position = styled.div`
+const Position = styled.h3`
+display: block;
+letter-spacing: 2px;
+font-weight: 700;
+float: left;
+${media.xs`
+  float:none;
+`}
+`;
+
+const Location = styled.div`
   display: block;
   clear: both;
   text-align: left;
@@ -37,19 +37,34 @@ const Position = styled.div`
   `}
 `;
 
+const Description = styled.div`
+  display: block;
+  clear: both;
+  text-align: left;
+  margin: 1rem 0;
+  font-size: 13pt;
+  width: 85%;
+  color: #fff !important;
+  ${media.xs`
+    text-align:center;
+    width: 100%;
+  `}
+`;
+
 function Experience(props) {
   const { edges } = props;
   return (
     <>
       {edges.map(({ node: item }) => (
-        <Item key={item.id}>
+      <Item key={item.id}>
           <Duration>
             {item.start}
             {' - '}
             {item.end}
           </Duration>
-          <Company>{item.company}</Company>
           <Position>{item.title}</Position>
+          <Location><strong>{item.company}</strong> - <em>{item.location}</em></Location>  
+          <Description>{item.description}</Description>
         </Item>
       ))}
     </>

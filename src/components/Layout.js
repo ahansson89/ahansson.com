@@ -26,16 +26,17 @@ const GlobalStyle = createGlobalStyle`
   body, input, select, textarea {
     font-size: 14pt;
     line-height: 1.5;
-    font-family: 'Open Sans';
+    font-family: 'Oxygen';
   }
 
   p {
     margin-bottom: 64px;
     color: #666;
+    font-family: 'Oxygen';
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway';
+    font-family: 'Prompt';
     text-transform: uppercase;
     letter-spacing: 0.3em;
     color: #292929;
@@ -78,6 +79,8 @@ const Layout = ({ children, noMenu }) => (
         site {
           siteMetadata {
             title
+            name
+            url
           }
         }
         allMenuJson {
@@ -95,8 +98,12 @@ const Layout = ({ children, noMenu }) => (
       <>
         <Body>
           <GlobalStyle />
-          <Helmet title={data.site.siteMetadata.title}>
+          <Helmet title={data.site.siteMetadata.name}>
             <html lang="en" />
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet"></link>
             <meta
               name="description"
               content="I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"
@@ -105,7 +112,7 @@ const Layout = ({ children, noMenu }) => (
           <Navbar menu={data.allMenuJson.edges} noMenu={noMenu} />
           {children}
           <Footer>
-            <FooterText>ahansson.com</FooterText>
+            <FooterText>&copy; Copyright {new Date().getFullYear()} {data.site.siteMetadata.name} - {data.site.siteMetadata.url}</FooterText>
           </Footer>
         </Body>
       </>

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Envelope as MailIcon } from 'styled-icons/fa-solid/Envelope.cjs';
 import { LinkedinIn as LinkedinIcon } from 'styled-icons/fa-brands/LinkedinIn.cjs';
-import { Github as GithubIcon } from 'styled-icons/fa-brands/Github.cjs';
+import { Twitter as TwitterIcon } from 'styled-icons/fa-brands/Twitter.cjs';
 import scrollToElement from 'scroll-to-element';
 import Link from './Link';
 import ButtonLink from './ButtonLink';
@@ -25,7 +25,7 @@ const IconWrapper = styled.div`
 function Social(props) {
   const { edges } = props;
   const linkedin = edges.find((o) => o.node.type === 'linkedin');
-  const github = edges.find((o) => o.node.type === 'github');
+  const twitter = edges.find((o) => o.node.type === 'twitter');
   const mail = edges.find((o) => o.node.type === 'mail');
 
   return (
@@ -33,11 +33,11 @@ function Social(props) {
       <Link aria-label={linkedin.node.type} to={linkedin.node.url}>
         <LinkedinIcon />
       </Link>
-      <Link aria-label={github.node.type} to={github.node.url}>
-        <GithubIcon />
+      <Link aria-label={twitter.node.type} to={twitter.node.url}>
+        <TwitterIcon />
       </Link>
       <ButtonLink
-        aria-label={github.node.type}
+        aria-label={mail.node.type}
         onClick={() => {
           scrollToElement(mail.node.url);
         }}

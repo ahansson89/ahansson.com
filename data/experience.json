@@ -1,38 +1,18 @@
 [
   {
-    "company": "2nd Watch",
-    "title": "Google Cloud Specialist Solutions Architect",
-    "start": "Nov 2020",
-    "end": "Current"
+    "company": "MaRHE Center (Marine Research & Higher Education)",
+    "title": "Student Intern",
+    "start": "Jan 2021",
+    "end": "Jan 2021",
+    "description": "Workshop Tropical Marine Ecology",
+    "location": "Milan, Italy"
   },
   {
-    "company": "Onica",
-    "title": "Customer Solutions Architect",
-    "start": "Jan 2020",
-    "end": "Jun 2020"
-  },
-  {
-    "company": "Mission",
-    "title": "Senior Cloud Solutions Architect",
-    "start": "Jan 2019",
-    "end": "Dec 2019"
-  },
-  {
-    "company": "General Datatech",
-    "title": "Cloud Solutions Architect",
-    "start": "Apr 2018",
-    "end": "Jan 2019"
-  },
-  {
-    "company": "Capgemini - Financial Services",
-    "title": "Senior Cloud Consultant",
-    "start": "Feb 2017",
-    "end": "Apr 2018"
-  },
-  {
-    "company": "Self Employed",
-    "title": "Independent Web & Cloud Consultant",
-    "start": "Sep 2010",
-    "end": "Feb 2017"
+    "company": "NIOZ Royal Netherlands Institute for Sea Research",
+    "title": "Research Intern",
+    "start": "Apr 2020",
+    "end": "Dec 2020",
+    "description": "MSc Thesis Project: \"Foraging behaviour in captive red knots: the role of individual differences in the use of social information\"",
+    "location": "Texel, Netherlands"
   }
 ]

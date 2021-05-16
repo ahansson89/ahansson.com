@@ -4,7 +4,8 @@ import styled, { css } from 'styled-components';
 import { Flex, Box } from 'grid-styled';
 import Experience from '../components/Experience';
 import Certifications from '../components/Certifications';
-import Technologies from '../components/Technologies';
+import Languages from '../components/Languages';
+import Projects from '../components/Projects';
 import Educations from '../components/Educations';
 import ContactForm from '../components/ContactForm';
 import Hero from '../components/Hero';
@@ -21,7 +22,7 @@ const Section = styled.div`
   ${props =>
     props.dark &&
     css`
-      background: #292929;
+      background: #015b6d;
       h2 {
         color: #fff;
       }
@@ -42,6 +43,10 @@ const SectionTitle = styled.h2`
   `}
 `;
 
+const Paragraph = styled.p`
+   margin: 1rem 0;
+`;
+
 const IndexPage = ({ data }) => (
   <Layout>
     <Hero fluid={data.hero.edges[0].node.fluid}>
@@ -52,16 +57,22 @@ const IndexPage = ({ data }) => (
       <h1>About Me</h1>
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>
-          <p>
-            I am a Cloud Solutions Architect. I help clients with various
-            problems related to doing business in the cloud. I care deeply about
-            serverless and modern application development and continuously find
-            ways to help my clients unlock value by switching from old
-            development methodologies to current approaches. I consult on best
-            practices on public cloud, including Cost Optimization, Cloud Native
-            Development, DevOps, Data &amp; Analytics, Migrations and Security.
-            Riding my mountain bike is one thing I do for fun.
-          </p>
+          <Paragraph>
+          After graduating in Biological Sciences I am currently doing 
+          my master's degree in Marine Sciences to pursue my dream of becoming a marine biologist.
+          </Paragraph>
+          <Paragraph>
+          My research interests are wide and include marine biology and ecology, 
+          marine conservation and the effects of climate change on the marine environment. 
+          </Paragraph>
+          <Paragraph>
+          In my future career, I would like to combine my passion for the ocean with 
+          the field of science communication through video making and editing.
+          </Paragraph>
+          <Paragraph>
+          I am moved by a strong will to learn and get involved by always giving my best. 
+          Some of my distinctive skills include motivation and commitment, as well as adaptability, time management and planning.   
+          </Paragraph>
         </Box>
       </Flex>
     </Section>
@@ -69,17 +80,25 @@ const IndexPage = ({ data }) => (
       <SectionTitle>My Experience</SectionTitle>
       <Experience edges={data.allExperienceJson.edges} />
     </Section>
-    <Section id="technologies">
-      <SectionTitle>My Favorite Technologies</SectionTitle>
-      <Technologies edges={data.allLogos.edges} />
+    <Section id="education">
+      <SectionTitle>My Education</SectionTitle>
+      <Educations edges={data.allEducationJson.edges} />
     </Section>
     <Section id="certifications" dark>
       <SectionTitle>My Certifications</SectionTitle>
       <Certifications edges={data.allCertificationsJson.edges} />
     </Section>
-    <Section id="education">
-      <SectionTitle>My Education</SectionTitle>
-      <Educations edges={data.allEducationJson.edges} />
+    <Section id="volunteering">
+      <SectionTitle>My Volunteering</SectionTitle>
+      <Educations edges={data.allVolunteeringJson.edges} />
+    </Section>
+    <Section id="projects" dark>
+      <SectionTitle>My Projects</SectionTitle>
+      <Projects edges={data.allProjectJson.edges} />
+    </Section>
+    <Section id="languages">
+      <SectionTitle>My Languages</SectionTitle>
+      <Languages edges={data.allLanguagesJson.edges} />
     </Section>
     <Section id="contact" dark>
       <SectionTitle>Contact Me</SectionTitle>
@@ -112,6 +131,8 @@ export const pageQuery = graphql`
           title
           start
           end
+          location
+          description
         }
       }
     }
@@ -120,9 +141,18 @@ export const pageQuery = graphql`
         node {
           name
           id
-          start
-          end
+          issued
           authority
+        }
+      }
+    }
+    allLanguagesJson {
+      edges {
+        node {
+          code
+          id
+          level
+          name
         }
       }
     }
@@ -140,7 +170,7 @@ export const pageQuery = graphql`
       }
     }
     hero: allImageSharp(
-      filter: { original: { src: { regex: "/golden-gate/" } } }
+      filter: { original: { src: { regex: "/seashore/" } } }
     ) {
       edges {
         node {
@@ -159,6 +189,31 @@ export const pageQuery = graphql`
           program
           start
           end
+          description
+          location
+        }
+      }
+    }
+    allVolunteeringJson {
+      edges {
+        node {
+          id
+          program
+          school
+          location
+          start
+          end
+          description
+        }
+      }
+    }
+    allProjectJson {
+      edges {
+        node {
+          id
+          title
+          link
+          description
         }
       }
     }

@@ -1,26 +1,43 @@
 [
   {
-    "school": "Stanford University, Palo Alto",
-    "program": "Continuing Education",
+    "school": "Utrecht University",
+    "location": "Utrecht, Netherlands",
+    "program": "MSc Marine Sciences",
     "start": "2019",
-    "end": "2019"
+    "end": "2021",
+    "description": "Modules: Introduction to Marine Sciences, Microbes and Biogeochemistry, Introduction to Physical Oceanography, Coastal Ecology, Evolutionary Paleobiology and Proxies, Oceans Law and Policy, Communicating Science with the Public."
   },
   {
-    "school": "Hult International Business School, San Francisco",
-    "program": "Masters of International Business",
-    "start": "2014",
-    "end": "2015"
+    "school": "Universitat de Barcelona",
+    "location": "Barcelona, Spain",
+    "program": "Erasmus+ Mobility Program",
+    "start": "2018",
+    "end": "2018",
+    "description": "Modules: Biology of Marine Invertebrates, Marine Ecology, Conservation of Biodiversity."
+
   },
   {
-    "school": "Copenhagen Business School, Denmark",
-    "program": "BSc Economics & Business Administration",
+    "school": "Università degli studi di Milano-Bicocca",
+    "location": "Milan, Italy",
+    "program": "BSc Biological Sciences",
+    "start": "2015",
+    "end": "2018",
+    "description": "Modules: Organic, Inorganic and Biological Chemistry, Physics, Mathematics and Statistics, Cytology and Anatomy, Zoology, Botany, Ecology, Molecular and Cellular Biology, Genetics, Animal and Plant Physiology, Microbiology and Immunology."
+  },
+  {
+    "school": "Hunters Hill High School",
+    "location": "Sydney, Australia",
+    "program": "High school trimester abroad",
+    "start": "2013",
+    "end": "2013",
+    "description": "Modules: English, Mathematics, Photography, PDHPE, Modern History, Creative Arts"
+  },
+  {
+    "school": "Liceo Linguistico Alessandro Manzoni",
+    "location": "Milan, Italy",
+    "program": "High school diploma",
     "start": "2010",
-    "end": "2014"
-  },
-  {
-    "school": "University of New South Wales, Australia",
-    "program": "BSc Study Abroad - 5th semester",
-    "start": "2012",
-    "end": "2012"
+    "end": "2015",
+    "description": "Modules: Foreign languages and literatures (English, Spanish and Chinese)"
   }
 ]

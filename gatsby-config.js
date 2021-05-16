@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Aleksander Hansson',
+    title: 'Aileen Roncoroni Portfolio',
+    name: 'Aileen Roncoroni',
+    url: 'aileenroncoroni.com',
   },
   plugins: [
     `gatsby-plugin-preact`,
@@ -32,8 +34,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Aleksander Hansson',
-        short_name: 'ahansson.com',
+        name: 'Aileen Roncoroni Portfolio',
+        short_name: 'aileenroncoroni.com',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',

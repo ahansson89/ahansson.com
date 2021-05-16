@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Italian",
+        "level": "Native",
+        "code": "IT"
+    },
+    {
+        "name": "English",
+        "level": "Advanced",
+        "code": "GB"
+    },
+    {
+        "name": "Spanish",
+        "level": "Advanced",
+        "code": "ES"
+    },
+    {
+        "name": "Dutch",
+        "level": "Beginner",
+        "code": "NL"
+    },
+    {
+        "name": "Chinese",
+        "level": "Beginner",
+        "code": "CN"
+    }
+]
