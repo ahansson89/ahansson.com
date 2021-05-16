@@ -106,7 +106,10 @@ const Layout = ({ children, noMenu }) => (
             <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet"></link>
             <meta
               name="description"
-              content="I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"
+              content="After graduating in Biological Sciences I am currently doing 
+              my master's degree in Marine Sciences to pursue my dream of becoming a marine biologist. 
+              My research interests are wide and include marine biology and ecology, 
+              marine conservation and the effects of climate change on the marine environment."
             />
           </Helmet>
           <Navbar menu={data.allMenuJson.edges} noMenu={noMenu} />

@@ -17,7 +17,6 @@ const Base = styled.a`
     -webkit-background-clip: text;
     background-image: url(${Pattern});
     text-decoration: none;
-    -webkit-transform:rotate(354deg);
   }
   ${(props) => props.dark
     && css`
