@@ -58,13 +58,17 @@ const IndexPage = ({ data }) => {
       <h1>About Me</h1>
       <About fixed={data.me.edges[0].node.fixed}/>
     </Section>
-    <Section id="experience" dark>
-      <SectionTitle>My Experience</SectionTitle>
-      <Experience edges={data.allExperienceJson.edges} />
+    <Section id="projects" dark>
+      <SectionTitle>My Projects</SectionTitle>
+      <Projects edges={data.allProjectJson.edges} />
     </Section>
     <Parallax bgImage={data.fieldwork.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
       <div style={{ height: '750px' }} />
     </Parallax>
+    <Section id="experience" dark>
+      <SectionTitle>My Experience</SectionTitle>
+      <Experience edges={data.allExperienceJson.edges} />
+    </Section>
     <Section id="education">
       <SectionTitle>My Education</SectionTitle>
       <Educations edges={data.allEducationJson.edges} />
@@ -79,10 +83,6 @@ const IndexPage = ({ data }) => {
     <Section id="volunteering">
       <SectionTitle>My Volunteering</SectionTitle>
       <Educations edges={data.allVolunteeringJson.edges} />
-    </Section>
-    <Section id="projects" dark>
-      <SectionTitle>My Projects</SectionTitle>
-      <Projects edges={data.allProjectJson.edges} />
     </Section>
     <Section id="languages">
       <SectionTitle>My Languages</SectionTitle>

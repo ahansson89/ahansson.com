@@ -4,10 +4,6 @@
     "link": "#contact"
   },
   {
-    "title": "Projects",
-    "link": "#projects"
-  },
-  {
     "title": "Volunteering",
     "link": "#volunteering"
   },
@@ -22,6 +18,10 @@
   {
     "title": "Experience",
     "link": "#experience"
+  },
+  {
+    "title": "Projects",
+    "link": "#projects"
   },
   {
     "title": "About Me",
