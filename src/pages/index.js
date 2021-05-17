@@ -42,6 +42,8 @@ const Section = styled.div`
 const SectionTitle = styled.h2`
   font-size: 2em;
   margin: 0.67em 0;
+  padding: 0 0 1rem 0;
+  font-weight: 800;
   ${media.xs`
     font-size:1.5em;
   `}
