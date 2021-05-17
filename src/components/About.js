@@ -46,10 +46,10 @@ const Description = styled.div`
 `;
 
 function About(props) {
-    const { fluid } = props;
+    const { fixed } = props;
     return (
         <Container>
-            <Avatar fluid={fluid} imgStyle={{ objectFit: "contain" }} />
+            <Avatar fixed={fixed} imgStyle={{ objectFit: "contain" }} />
             <Description>
                 <Paragraph>
                     After graduating in Biological Sciences I am currently doing

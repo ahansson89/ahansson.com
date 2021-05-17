@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import 'whatwg-fetch'; // Fetch Polyfill
 
-const Form = styled.form``;
-
 const Name = styled.input`
   border: 0;
   padding: 10px;

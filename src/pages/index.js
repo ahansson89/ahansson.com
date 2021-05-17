@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
 import { Flex, Box } from 'grid-styled';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 import Experience from '../components/Experience';
 import About from '../components/About';
@@ -47,12 +47,6 @@ const SectionTitle = styled.h2`
   `}
 `;
 
-const ParallaxImage = styled.img`
-  ${media.xs`
-    left: 0%;
-  `}
-`;
-
 const IndexPage = ({ data }) => {
 
   return (<Layout>
@@ -62,7 +56,7 @@ const IndexPage = ({ data }) => {
     </Hero>
     <Section id="about-me">
       <h1>About Me</h1>
-      <About fluid={data.me.edges[0].node.fluid}/>
+      <About fixed={data.me.edges[0].node.fixed}/>
     </Section>
     <Section id="experience" dark>
       <SectionTitle>My Experience</SectionTitle>
@@ -168,8 +162,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          fluid(maxWidth: 250) {
-            ...GatsbyImageSharpFluid_withWebp
+          fixed(width: 500, height: 500) {
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
@@ -180,7 +174,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          fluid(maxWidth: 1280) {
+          fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -192,7 +186,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          fluid(maxWidth: 1280) {
+          fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
