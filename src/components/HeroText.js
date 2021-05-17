@@ -19,6 +19,8 @@ const StyledTypist = styled(Typist)`
     letter-spacing: 8px;
   `}
 
+  color: #fff;
+
   strong {
     font-weight: 800;
   }

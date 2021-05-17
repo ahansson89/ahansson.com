@@ -43,6 +43,7 @@ const BgImage = styled(Image)`
 `;
 
 const Video = styled.video`
+  display: block;
   width: 100%;
   height: 100%;
 
@@ -51,15 +52,32 @@ const Video = styled.video`
   `}
 `;
 
+const Content = styled.div`
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+`;
+
 
 function BgVideo(props) {
   const { videos, poster } = props;
   return (
-    <Video autoPlay="autoplay" loop="loop" muted poster={poster} >
-        <source src={videos.first.path} type="video/webm" />
-        <source src={videos.second.path} type="video/mp4" />
-        Your browser does not support the video tag.
-    </Video>
+    <Content>
+      <Video autoPlay="autoplay" loop="loop" muted poster={poster} >
+          <source src={videos.first.path} type="video/webm" />
+          <source src={videos.second.path} type="video/mp4" />
+          Your browser does not support the video tag.
+      </Video>
+    </Content>
   );
 }
 
