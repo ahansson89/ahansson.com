@@ -42,7 +42,7 @@ const Description = styled.div`
   clear: both;
   text-align: left;
   margin: 1rem 0;
-  font-size: 13pt;
+  font-size: 100%;
   width: 85%;
   ${media.xs`
     text-align:center;

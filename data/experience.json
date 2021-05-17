@@ -1,5 +1,13 @@
 [
   {
+    "title": "Ocean Volunteer",
+    "description": "• Sharing information and events with my network of acquaintances\n• Taking an active part in projects and activities such as beach cleaning, fairs, events, conferences and workshops\n• Proposing and taking part in writing articles for the Worldrise magazine\n• Sharing works of art such as texts, photographs, video materials and graphics dedicated to the sea and nature",
+    "start": "Apr 2021",
+    "end": "Present",
+    "location": "Italy",
+    "company": "Worldrise Onlus"
+  },
+  {
     "company": "MaRHE Center (Marine Research & Higher Education)",
     "title": "Student Intern",
     "start": "Jan 2021",
@@ -14,5 +22,13 @@
     "end": "Dec 2020",
     "description": "MSc Thesis Project: \"Foraging behaviour in captive red knots: the role of individual differences in the use of social information\"",
     "location": "Texel, Netherlands"
+  },
+  {
+    "title": "Volunteer",
+    "description": "• Children’s animator and private tutor (main subjects: science, math and English)\n• Group leader and chaperone in summer schools in England\n• Social media management",
+    "start": "Sep 2017",
+    "end": "Sep 2017",
+    "location": "Linosa, Italy",
+    "company": "Centro Recupero Tartarughe Marine Linosa"
   }
 ]

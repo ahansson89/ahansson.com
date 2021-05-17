@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'gatsby-image';
 import styled from 'styled-components';
+import media from '../utils/style';
 
 const Container = styled.div`
   display: flex;
@@ -41,11 +42,33 @@ const BgImage = styled(Image)`
   }
 `;
 
+const Video = styled.video`
+  width: 100%;
+  height: 100%;
+
+  ${media.md`
+    width: 1250px;
+  `}
+`;
+
+
+function BgVideo(props) {
+  const { videos, poster } = props;
+  return (
+    <Video autoPlay="autoplay" loop="loop" muted poster={poster} >
+        <source src={videos.first.path} type="video/webm" />
+        <source src={videos.second.path} type="video/mp4" />
+        Your browser does not support the video tag.
+    </Video>
+  );
+}
+
 function Hero(props) {
-  const { children, fluid } = props;
+  const { children, videos } = props;
   return (
     <Container>
-      <BgImage fluid={fluid} />
+      {/* <BgImage fluid={fluid} /> */}
+      <BgVideo videos={videos} />
       <Overlay>{children}</Overlay>
     </Container>
   );

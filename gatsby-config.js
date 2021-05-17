@@ -22,6 +22,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    `gatsby-transformer-video`,
     'gatsby-transformer-json',
     'gatsby-plugin-sharp',
     {

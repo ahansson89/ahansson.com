@@ -48,9 +48,8 @@ const SectionTitle = styled.h2`
 `;
 
 const IndexPage = ({ data }) => {
-
   return (<Layout>
-    <Hero fluid={data.hero.edges[0].node.fluid}>
+    <Hero videos={data.videos} poster={data.poster.edges[0].node.fluid.srcWebp}>
       <HeroText />
       <Social edges={data.allSocialJson.edges}/>
     </Hero>
@@ -80,10 +79,6 @@ const IndexPage = ({ data }) => {
     <Parallax bgImage={data.snorkeling.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
       <div style={{ height: '750px' }} />
     </Parallax>
-    <Section id="volunteering">
-      <SectionTitle>My Volunteering</SectionTitle>
-      <Educations edges={data.allVolunteeringJson.edges} />
-    </Section>
     <Section id="languages">
       <SectionTitle>My Languages</SectionTitle>
       <Languages edges={data.allLanguagesJson.edges} />
@@ -192,6 +187,18 @@ export const pageQuery = graphql`
         }
       }
     }
+    poster: allImageSharp(
+      filter: { original: { src: { regex: "/video_poster/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
     allEducationJson {
       edges {
         node {
@@ -205,19 +212,6 @@ export const pageQuery = graphql`
         }
       }
     }
-    allVolunteeringJson {
-      edges {
-        node {
-          id
-          program
-          school
-          location
-          start
-          end
-          description
-        }
-      }
-    }
     allProjectJson {
       edges {
         node {
@@ -228,5 +222,13 @@ export const pageQuery = graphql`
         }
       }
     }
+    videos: file(relativePath: {eq: "seashore.mp4"}) {
+      first: videoWebP(maxWidth: 1920, fps: 25) {
+          path
+          }
+      second: videoH264(maxWidth: 1920, fps: 25) {
+          path
+        }
+      }
   }
 `;
