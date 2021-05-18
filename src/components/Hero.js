@@ -58,7 +58,7 @@ const Content = styled.div`
   &:before {
     content: '';
     position: absolute;
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.11);
     border-radius: 5px;
     top: 0;
     right: 0;

@@ -48,6 +48,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  em {
+    font-style: italic;
+  }
+
+
 `;
 
 const Body = styled.div`

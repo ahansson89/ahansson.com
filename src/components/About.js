@@ -14,13 +14,10 @@ const Paragraph = styled.p`
 
 const Avatar = styled(Img)`
     flex-basis:33.33%;
-    margin: 0 0 0 5rem;
-    height: 350px;
-    width: 350px;
+    margin: 0 5rem 0 0;
     ${media.md`
         flex-basis: 100%;
-        height: 250px;
-        width: 250px;
+        margin: 0;
     `}
 `;
 
@@ -39,17 +36,17 @@ const Description = styled.div`
     display: flex;
     flex-direction: column;
     flex-basis:66.66%;
-    padding: 0 5rem;
+    padding: 0 1rem;
     ${media.md`
         flex-basis: 100%;
     `}
 `;
 
 function About(props) {
-    const { fixed } = props;
+    const { fluid } = props;
     return (
         <Container>
-            <Avatar fixed={fixed} imgStyle={{ objectFit: "contain" }} />
+            <Avatar fixed={fluid} imgStyle={{ objectFit: "contain" }} />
             <Description>
                 <Paragraph>
                     After graduating in Biological Sciences I am currently doing

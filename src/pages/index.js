@@ -26,7 +26,7 @@ const Section = styled.div`
   ${props =>
     props.dark &&
     css`
-      background: #015b6d;
+      background: #4dacbf;
       h2 {
         color: #fff;
       }
@@ -34,7 +34,7 @@ const Section = styled.div`
         color: #fff;
       }
       div {
-        color: #979797;
+        color: #e6f3f6;
       }
     `}
 `;
@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
     </Hero>
     <Section id="about-me">
       <h1>About Me</h1>
-      <About fixed={data.me.edges[0].node.fixed}/>
+      <About fluid={data.me.edges[0].node.fluid}/>
     </Section>
     <Section id="projects" dark>
       <SectionTitle>My Projects</SectionTitle>
@@ -159,8 +159,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          fixed(width: 500, height: 500) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

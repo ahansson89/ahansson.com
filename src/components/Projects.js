@@ -4,11 +4,16 @@ import styled from 'styled-components';
 
 import media from '../utils/style';
 
-const Item = styled.div`
+const Item = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  height: 100%;
+
+  ${media.xs`
+    width: 90%;
+  `}
 `;
 
 const Grid = styled.section`
@@ -17,7 +22,7 @@ const Grid = styled.section`
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     margin: 0 auto;
-    max-width: 1250px;
+    max-width: 1150px;
     align-items: flex-start;
 
     ${media.xs`
@@ -30,8 +35,10 @@ const Title = styled.h3`
   letter-spacing: 2px;
   font-weight: 700;
   float: left;
+  height: 3rem;
   ${media.xs`
     float:none;
+    height: auto;
   `}
 `;
 
@@ -43,7 +50,12 @@ const Description = styled.div`
 `;
 
 const Video = styled.iframe`
-   margin: 2rem 0;
+border-radius: .35em;
+margin: 2rem 0;
+`;
+
+const Image = styled.img`
+border-radius: .35em;
 `;
 
 
@@ -59,7 +71,7 @@ function Projects(props) {
                 width="360" 
                 height="200" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture fullscreen" 
                 allowfullscreen/>
             <Title>{item.title}</Title>
             <Description>{item.description}</Description>

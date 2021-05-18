@@ -7,6 +7,10 @@ const Item = styled.div`
   width: 60%;
   margin: 0 auto;
   margin-bottom: 2.5em;
+
+  ${media.xs`
+    width: 90%;
+  `}
 `;
 
 const Duration = styled.div`
@@ -42,7 +46,7 @@ const Description = styled.div`
   clear: both;
   text-align: left;
   margin: 1rem 0;
-  font-size: 100%;
+  font-size: 13pt;
   width: 85%;
   color: #fff !important;
   ${media.xs`

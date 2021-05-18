@@ -7,6 +7,9 @@ const Item = styled.div`
   width: 60%;
   margin: 0 auto;
   margin-bottom: 2.5em;
+  ${media.xs`
+    width: 90%;
+  `}
 `;
 
 const Program = styled.h3`
