@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => {
       <Projects edges={data.allProjectJson.edges} />
     </Section>
     <Parallax bgImage={data.fieldwork.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
-      <div style={{ height: '750px' }} />
+      <div style={{ height: '650px' }} />
     </Parallax>
     <Section id="experience" dark>
       <SectionTitle>My Experience</SectionTitle>
@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
       <Certifications edges={data.allCertificationsJson.edges} />
     </Section>
     <Parallax bgImage={data.snorkeling.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
-      <div style={{ height: '750px' }} />
+      <div style={{ height: '650px' }} />
     </Parallax>
     <Section id="languages">
       <SectionTitle>My Languages</SectionTitle>
