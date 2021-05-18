@@ -54,10 +54,6 @@ border-radius: .35em;
 margin: 2rem 0;
 `;
 
-const Image = styled.img`
-border-radius: .35em;
-`;
-
 
 function Projects(props) {
   const { edges } = props;
