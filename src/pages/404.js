@@ -12,10 +12,11 @@ const StyledHero = styled(Hero)`
 
 const NotFoundPage = ({ data }) => (
   <Layout noMenu>
-    <StyledHero fluid={data.hero.edges[0].node.fluid}>
+    Sorry, there's nothing here
+    {/* <StyledHero fluid={data.hero.edges[0].node.fluid}>
       <HeroText text="404 Not Found" />
       <Social edges={data.allSocialJson.edges} />
-    </StyledHero>
+    </StyledHero> */}
   </Layout>
 );
 
