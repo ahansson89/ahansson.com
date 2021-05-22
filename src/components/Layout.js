@@ -72,7 +72,7 @@ const Footer = styled.footer`
   width: 100vw;
   text-align: center;
   color: #fff;
-  background-color: #015b6d;
+  background-color: rgb(77, 172, 191);
   img {
     margin-bottom: 0;
   }

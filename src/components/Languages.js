@@ -51,7 +51,7 @@ function Languages(props) {
     <Grid>
       {edges.map(({ node: item }) => (
         <Item key={item.id}>
-            <Flag code={item.code} height={48} style={{display: "block", margin: "auto"}}/>
+            <Flag code={item.code} height={48} style={{display: "block", margin: "1rem 0", borderRadius: ".35rem"}}/>
             <Language>{item.name}</Language>
             <Level>{item.level}</Level>
         </Item>

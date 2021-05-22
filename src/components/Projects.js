@@ -46,7 +46,8 @@ const Title = styled.h3`
 const Description = styled.div`
   display: block;
   clear: both;
-  text-align:center;
+  text-align: center;
+  margin: 1rem 0;
 `;
 
 const Video = styled.iframe`
@@ -67,7 +68,7 @@ function Projects(props) {
                 width="360" 
                 height="200" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture fullscreen" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen" 
                 allowfullscreen/>
             <Title>{item.title}</Title>
             <Description>{item.description}</Description>

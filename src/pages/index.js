@@ -15,6 +15,7 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import HeroText from '../components/HeroText';
 import Social from '../components/Social';
+import Technologies from '../components/Technologies';
 
 
 import media from '../utils/style';
@@ -64,22 +65,29 @@ const IndexPage = ({ data }) => {
       <Projects edges={data.allProjectJson.edges} />
     </Section>
     <Parallax bgImage={data.fieldwork.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
-      <div style={{ height: '650px' }} />
+      <div style={{ height: '750px' }} />
     </Parallax>
     <Section id="experience" dark>
       <SectionTitle>My Experience</SectionTitle>
       <Experience edges={data.allExperienceJson.edges} />
     </Section>
+    <Parallax bgImage={data.microscope.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
+      <div style={{ height: '750px' }} />
+    </Parallax>
     <Section id="education">
       <SectionTitle>My Education</SectionTitle>
       <Educations edges={data.allEducationJson.edges} />
     </Section>
+    <Parallax bgImage={data.turtle.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
+      <div style={{ height: '750px' }} />
+    </Parallax>
     <Section id="certifications" dark>
       <SectionTitle>My Certifications</SectionTitle>
+      {/* <Technologies edges={data.allCertificationsJson.edges} /> */}
       <Certifications edges={data.allCertificationsJson.edges} />
     </Section>
-    <Parallax bgImage={data.snorkeling.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
-      <div style={{ height: '650px' }} />
+    <Parallax bgImage={data.diving.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
+      <div style={{ height: '750px' }} />
     </Parallax>
     <Section id="languages">
       <SectionTitle>My Languages</SectionTitle>
@@ -177,8 +185,32 @@ export const pageQuery = graphql`
         }
       }
     }
-    snorkeling: allImageSharp(
-      filter: { original: { src: { regex: "/snorkeling/" } } }
+    diving: allImageSharp(
+      filter: { original: { src: { regex: "/diving/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    microscope: allImageSharp(
+      filter: { original: { src: { regex: "/microscope/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    turtle: allImageSharp(
+      filter: { original: { src: { regex: "/turtle/" } } }
     ) {
       edges {
         node {

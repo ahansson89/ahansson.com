@@ -40,18 +40,6 @@ const School = styled.div`
   `}
 `;
 
-const Description = styled.div`
-  display: block;
-  clear: both;
-  text-align: left;
-  margin: 1rem 0;
-  font-size: 100%;
-  width: 85%;
-  ${media.xs`
-    text-align:center;
-    width: 100%;
-  `}
-`;
 
 function Educations(props) {
   const { edges } = props;
@@ -66,7 +54,6 @@ function Educations(props) {
           </Duration>
           <Program>{item.program}</Program>
           <School><strong>{item.school}</strong> - <em>{item.location}</em></School>
-          <Description>{item.description}</Description>
         </Item>
       ))}
     </>
