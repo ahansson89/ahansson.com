@@ -31,8 +31,8 @@ module.exports = {
         name: 'Aileen Roncoroni Portfolio',
         short_name: 'aileenroncoroni.com',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#4DACBF',
+        theme_color: '#4DACBF',
         display: 'minimal-ui',
         icon: 'src/images/me.png', // This path is relative to the root of the site.
       },
