@@ -72,7 +72,7 @@ function BgVideo(props) {
   const { videos, poster } = props;
   return (
     <Content>
-      <Video autoPlay="autoplay" loop="loop" muted poster={poster} >
+      <Video autoPlay="autoplay" loop="loop" muted poster={poster} preload="none">
           <source src={videos.first.path} type="video/webm" />
           <source src={videos.second.path} type="video/mp4" />
           Your browser does not support the video tag.
