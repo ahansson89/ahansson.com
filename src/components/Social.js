@@ -20,6 +20,10 @@ const IconWrapper = styled.div`
     height: 1em;
     padding: 1.5em;
   }
+
+  ${({ relative }) => relative && `
+    position: relative;
+  `}
 `;
 
 function Social(props) {
@@ -29,7 +33,7 @@ function Social(props) {
   const mail = edges.find((o) => o.node.type === 'mail');
 
   return (
-    <IconWrapper>
+    <IconWrapper relative={props.relative}>
       <Link aria-label={linkedin.node.type} to={linkedin.node.url}>
         <LinkedinIcon />
       </Link>

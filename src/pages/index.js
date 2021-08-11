@@ -98,6 +98,7 @@ const IndexPage = ({ data }) => {
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>
           <ContactForm />
+          
         </Box>
       </Flex>
     </Section>

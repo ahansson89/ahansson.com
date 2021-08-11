@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import styledNormalize from 'styled-normalize';
+import Social from '../components/Social';
 import 'typeface-pacifico';
 import 'typeface-raleway';
 import 'typeface-open-sans';
@@ -103,6 +104,14 @@ const Layout = ({ children, noMenu }) => (
             }
           }
         }
+        allSocialJson {
+          edges {
+            node {
+              url
+              type
+            }
+          }
+        }
       }
     `}
     render={(data) => (
@@ -126,6 +135,7 @@ const Layout = ({ children, noMenu }) => (
           <Navbar menu={data.allMenuJson.edges} noMenu={noMenu} />
           {children}
           <Footer>
+            <Social edges={data.allSocialJson.edges} relative={true}/>
             <FooterText>&copy; Copyright {new Date().getFullYear()} {data.site.siteMetadata.name} - {data.site.siteMetadata.url}</FooterText>
           </Footer>
         </Body>
