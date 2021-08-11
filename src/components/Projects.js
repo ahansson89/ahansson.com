@@ -67,9 +67,10 @@ function Projects(props) {
                 src={item.link} 
                 width="360" 
                 height="200" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen" 
-                allowfullscreen/>
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Embedded youtube"></Video>
             <Title>{item.title}</Title>
             <Description>{item.description}</Description>
         </Item>
