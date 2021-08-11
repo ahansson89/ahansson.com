@@ -15,7 +15,6 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import HeroText from '../components/HeroText';
 import Social from '../components/Social';
-import Technologies from '../components/Technologies';
 
 
 import media from '../utils/style';
@@ -83,7 +82,6 @@ const IndexPage = ({ data }) => {
     </Parallax>
     <Section id="certifications" dark>
       <SectionTitle>My Certifications</SectionTitle>
-      {/* <Technologies edges={data.allCertificationsJson.edges} /> */}
       <Certifications edges={data.allCertificationsJson.edges} />
     </Section>
     <Parallax bgImage={data.diving.edges[0].node.fluid.srcWebp} strength={200} bgClassName={"parallax-img"}>
