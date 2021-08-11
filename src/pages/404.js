@@ -1,12 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
 
-const StyledHero = styled(Hero)`
-  margin-top: -62px;
-`;
 
 const NotFoundPage = ({ data }) => (
   <Layout noMenu>
