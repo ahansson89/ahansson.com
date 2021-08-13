@@ -1,5 +1,10 @@
 [
   {
+    "name": "Advanced Open Water Diver",
+    "authority": "PADI",
+    "issued": "Aug 2021"
+  },
+  {
     "name": "Video Editing in DaVinci Resolve 17",
     "authority": "Udemy",
     "issued": "Apr 2021"
@@ -18,10 +23,5 @@
     "name": "DELE B2",
     "authority": "Istituto Cervantes",
     "issued": "Nov 2014"
-  },
-  {
-    "name": "Open Water Diver",
-    "authority": "PADI",
-    "issued": "Aug 2012"
   }
 ]
