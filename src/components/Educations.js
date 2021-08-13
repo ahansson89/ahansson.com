@@ -6,7 +6,10 @@ import media from '../utils/style';
 const Item = styled.div`
   width: 60%;
   margin: 0 auto;
-  margin-bottom: 1.5em;
+  margin-bottom: 2.5em;
+  ${media.xs`
+    width: 90%;
+  `}
 `;
 
 const Program = styled.h3`
@@ -37,6 +40,7 @@ const School = styled.div`
   `}
 `;
 
+
 function Educations(props) {
   const { edges } = props;
   return (
@@ -49,7 +53,7 @@ function Educations(props) {
             {item.end}
           </Duration>
           <Program>{item.program}</Program>
-          <School>{item.school}</School>
+          <School><strong>{item.school}</strong> - <em>{item.location}</em></School>
         </Item>
       ))}
     </>

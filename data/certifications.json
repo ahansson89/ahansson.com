@@ -1,62 +1,27 @@
 [
   {
-    "name": "Certified Professional Cloud Architect",
-    "authority": "Google Cloud Platform",
-    "start": "Dec 2017",
-    "end": "Dec 2022"
+    "name": "Advanced Open Water Diver",
+    "authority": "PADI",
+    "issued": "Aug 2021"
   },
   {
-    "name": "Certified Professional DevOps Engineer",
-    "authority": "Google Cloud Platform",
-    "start": "Dec 2020",
-    "end": "Dec 2022"
+    "name": "Video Editing in DaVinci Resolve 17",
+    "authority": "Udemy",
+    "issued": "Apr 2021"
   },
   {
-    "name": "Certified Professional Data Engineer",
-    "authority": "Google Cloud Platform",
-    "start": "Jan 2021",
-    "end": "Jan 2023"
+    "name": "R Programming",
+    "authority": "Udemy",
+    "issued": "Feb 2021"
   },
   {
-    "name": "Certified Associate Cloud Engineer",
-    "authority": "Google Cloud Platform",
-    "start": "Dec 2020",
-    "end": "Dec 2022"
+    "name": "IELTS Academic (Score: 8.0)",
+    "authority": "IELTS Official",
+    "issued": "Mar 2019"
   },
   {
-    "name": "Certified Security - Specialty",
-    "authority": "Amazon Web Services",
-    "start": "Dec 2019",
-    "end": "Dec 2022"
-  },
-  {
-    "name": "Certified Solutions Architect - Professional",
-    "authority": "Amazon Web Services",
-    "start": "Oct 2018",
-    "end": "Oct 2021"
-  },
-  {
-    "name": "Certified DevOps Engineer - Professional",
-    "authority": "Amazon Web Services",
-    "start": "Nov 2018",
-    "end": "Nov 2021"
-  },
-  {
-    "name": "Certified Developer - Associate",
-    "authority": "Amazon Web Services",
-    "start": "Nov 2018",
-    "end": "Nov 2021"
-  },
-  {
-    "name": "Certified SysOps Administrator - Associate",
-    "authority": "Amazon Web Services",
-    "start": "Nov 2018",
-    "end": "Nov 2021"
-  },
-  {
-    "name": "Certified Solutions Architect - Associate",
-    "authority": "Amazon Web Services",
-    "start": "Sep 2017",
-    "end": "Nov 2021"
+    "name": "DELE B2",
+    "authority": "Istituto Cervantes",
+    "issued": "Nov 2014"
   }
 ]

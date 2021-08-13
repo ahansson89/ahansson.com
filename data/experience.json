@@ -1,38 +1,42 @@
 [
   {
-    "company": "2nd Watch",
-    "title": "Google Cloud Specialist Solutions Architect",
-    "start": "Nov 2020",
-    "end": "Current"
+    "title": "Research Intern",
+    "description": "Marine mammal research and conservation",
+    "start": "Jun 2021",
+    "end": "Present",
+    "location": "Greece",
+    "company": "Archipelagos Institute of Marine Conservation "
   },
   {
-    "company": "Onica",
-    "title": "Customer Solutions Architect",
-    "start": "Jan 2020",
-    "end": "Jun 2020"
+    "title": "Ocean Volunteer",
+    "description": "Actively supporting the organization",
+    "start": "Apr 2021",
+    "end": "Present",
+    "location": "Italy",
+    "company": "Worldrise Onlus"
   },
   {
-    "company": "Mission",
-    "title": "Senior Cloud Solutions Architect",
-    "start": "Jan 2019",
-    "end": "Dec 2019"
+    "company": "MaRHE Center (Marine Research & Higher Education)",
+    "title": "Student Intern",
+    "start": "Jan 2021",
+    "end": "Jan 2021",
+    "description": "Workshop Tropical Marine Ecology",
+    "location": "Milan, Italy"
   },
   {
-    "company": "General Datatech",
-    "title": "Cloud Solutions Architect",
-    "start": "Apr 2018",
-    "end": "Jan 2019"
+    "company": "NIOZ Royal Netherlands Institute for Sea Research",
+    "title": "Research Intern",
+    "start": "Apr 2020",
+    "end": "Dec 2020",
+    "description": "MSc Thesis Project: \"Foraging behaviour in captive red knots: the role of individual differences in the use of social information\"",
+    "location": "Texel, Netherlands"
   },
   {
-    "company": "Capgemini - Financial Services",
-    "title": "Senior Cloud Consultant",
-    "start": "Feb 2017",
-    "end": "Apr 2018"
-  },
-  {
-    "company": "Self Employed",
-    "title": "Independent Web & Cloud Consultant",
-    "start": "Sep 2010",
-    "end": "Feb 2017"
+    "title": "Volunteer",
+    "description": "Participating in the activities",
+    "start": "Sep 2017",
+    "end": "Sep 2017",
+    "location": "Linosa, Italy",
+    "company": "Centro Recupero Tartarughe Marine Linosa"
   }
 ]

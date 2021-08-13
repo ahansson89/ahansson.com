@@ -44,9 +44,8 @@ function Certifications(props) {
       {edges.map(({ node: item }) => (
         <Item key={item.id}>
           <Duration>
-            {item.start}
-            {' - '}
-            {item.end}
+            {"Issued: "}
+            {item.issued}
           </Duration>
           <Name>{item.name}</Name>
           <Authority>{item.authority}</Authority>

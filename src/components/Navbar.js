@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import styled from 'styled-components';
 import { Flex, Box } from 'grid-styled';
 import scrollToElement from 'scroll-to-element';
@@ -15,7 +15,10 @@ const Base = styled.div`
   line-height: 62px;
   width: 100vw;
   z-index: 10000;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  align-self: flex-start;
+  background: #4dacbf00;
   & ul {
     width: 100%;
     height: 62px;
@@ -24,6 +27,10 @@ const Base = styled.div`
     list-style: none;
     font-size: 13px;
   }
+
+  ${({ transparent }) => transparent && `
+    background: #4dacbfff;
+  `}
 `;
 
 const MenuBox = styled(Box)`
@@ -59,8 +66,19 @@ const MenuItem = styled(ButtonLink)`
 
 function NavBar(props) {
   const { noMenu, menu } = props;
+
+  const [transparent, setTransparent] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+      setTransparent(window.pageYOffset > 500)
+      );
+    }
+  }, []);
+
   return (
-    <Base>
+    <Base transparent={transparent}>
       <Flex>
         <NameBox px={2} width={[1, 1 / 3, 2 / 6]}>
           <Name />

@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Aleksander Hansson',
+    title: 'Aileen Roncoroni Portfolio',
+    name: 'Aileen Roncoroni',
+    url: 'aileenroncoroni.com',
   },
   plugins: [
     `gatsby-plugin-preact`,
@@ -15,30 +17,24 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'logos',
-        path: `${__dirname}/src/images/logos`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
     'gatsby-transformer-sharp',
+    `gatsby-transformer-video`,
     'gatsby-transformer-json',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Aleksander Hansson',
-        short_name: 'ahansson.com',
+        name: 'Aileen Roncoroni Portfolio',
+        short_name: 'aileenroncoroni.com',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#4DACBF',
+        theme_color: '#4DACBF',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/me.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-styled-components',
