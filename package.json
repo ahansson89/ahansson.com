@@ -27,6 +27,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-parallax": "^3.3.0",
+    "react-text-typist": "^1.1.0",
     "react-typist": "^2.0.4",
     "react-world-flags": "^1.4.0",
     "scroll-to-element": "^2.0.2",

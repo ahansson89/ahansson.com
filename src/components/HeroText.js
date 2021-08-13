@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Typist from 'react-typist';
+import Typist from 'react-text-typist';
 
 import media from '../utils/style';
 
@@ -27,30 +27,13 @@ const StyledTypist = styled(Typist)`
 `;
 
 function HeroText(props) {
-  const { text } = props;
-  if (text) {
-    return (
-      <StyledTypist cursor={{ show: false }}>
-        <strong>{text.split(' ').slice(0, 1)}</strong>
-        <br />
-        {text
-          .split(' ')
-          .slice(1)
-          .join(' ')}
-      </StyledTypist>
-    );
-  }
   return (
-    <StyledTypist cursor={{ show: false }}>
-      <strong key={1}>I</strong>
-      <span key={2}> am a marine scientist-to-be</span>
-      <Typist.Backspace count={28} delay={1000} />
-      <span key={3}> am a MSc student at Utrecht University</span>
-      <Typist.Backspace count={39} delay={1000} />
-      <span key={4}> am based in Milan, Italy</span>
-      <Typist.Backspace count={26} delay={1000} />
-      <strong key={5}>Keep scrolling</strong>
-      <span key={6}> to get to know me!</span>
+    <StyledTypist 
+    sentences={['I am a marine scientist-to-be', 
+                'I am a MSc student at Utrecht University', 
+                'I am based in Milan, Italy', 
+                'Keep scrolling to get to know me!']} 
+    loop={true}>
     </StyledTypist>
   );
 }
