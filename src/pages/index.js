@@ -53,14 +53,25 @@ const IndexPage = ({ data }) => (
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>
           <p>
-            I am a Cloud Solutions Architect. I help clients with various
-            problems related to doing business in the cloud. I care deeply about
-            serverless and modern application development and continuously find
-            ways to help my clients unlock value by switching from old
-            development methodologies to current approaches. I consult on best
-            practices on public cloud, including Cost Optimization, Cloud Native
-            Development, DevOps, Data &amp; Analytics, Migrations and Security.
-            Riding my mountain bike is one thing I do for fun.
+            As a Cloud Solutions Architect specializing in Media and
+            Entertainment, my focus is on helping clients overcome the unique
+            challenges of the media industry. I work closely with clients to
+            develop innovative solutions for monetization, content distribution,
+            and platform optimization.
+          </p>
+          <p>
+            My expertise in serverless technologies and modern application
+            development enables me to help unlock new revenue streams and drive
+            growth for clients. By providing guidance on best practices in the
+            public cloud, including cost optimization, cloud-native development,
+            DevOps, data and analytics, migrations, and security, I help clients
+            stay ahead of the competition. With the rise of streaming and
+            on-demand content, the industry is facing unprecedented challenges
+            related to scalability and reliability. As a result, my focus is on
+            designing and implementing cloud-based architectures that are both
+            efficient and resilient. This allows clients to deliver superior
+            experiences to their customers while also improving their bottom
+            line.
           </p>
         </Box>
       </Flex>
