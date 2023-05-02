@@ -3,7 +3,6 @@ module.exports = {
     title: 'Aleksander Hansson',
   },
   plugins: [
-    `gatsby-plugin-preact`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
