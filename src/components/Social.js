@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Envelope as MailIcon } from 'styled-icons/fa-solid/Envelope.cjs';
-import { LinkedinIn as LinkedinIcon } from 'styled-icons/fa-brands/LinkedinIn.cjs';
-import { Github as GithubIcon } from 'styled-icons/fa-brands/Github.cjs';
+import { Envelope as MailIcon } from '@styled-icons/fa-solid';
+import { Linkedin as LinkedinIcon } from '@styled-icons/fa-brands';
+import { GithubSquare as GithubIcon } from '@styled-icons/fa-brands';
 import scrollToElement from 'scroll-to-element';
 import Link from './Link';
 import ButtonLink from './ButtonLink';
@@ -22,11 +22,11 @@ const IconWrapper = styled.div`
   }
 `;
 
-function Social(props) {
+const Social = props => {
   const { edges } = props;
-  const linkedin = edges.find((o) => o.node.type === 'linkedin');
-  const github = edges.find((o) => o.node.type === 'github');
-  const mail = edges.find((o) => o.node.type === 'mail');
+  const linkedin = edges.find(o => o.node.type === 'linkedin');
+  const github = edges.find(o => o.node.type === 'github');
+  const mail = edges.find(o => o.node.type === 'mail');
 
   return (
     <IconWrapper>
@@ -46,6 +46,6 @@ function Social(props) {
       </ButtonLink>
     </IconWrapper>
   );
-}
+};
 
 export default Social;
