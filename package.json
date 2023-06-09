@@ -5,7 +5,7 @@
   "author": "Aleksander Hansson <hello@ahansson.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.1",
-    "gatsby": "^5.9.0",
+    "gatsby": "^5.9.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-netlify": "^5.1.0",
