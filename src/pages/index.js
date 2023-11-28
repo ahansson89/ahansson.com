@@ -53,25 +53,7 @@ const IndexPage = ({ data }) => (
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>
           <p>
-            As a Cloud Solutions Architect specializing in Media and
-            Entertainment, my focus is on helping clients overcome the unique
-            challenges of the media industry. I work closely with clients to
-            develop innovative solutions for monetization, content distribution,
-            and platform optimization.
-          </p>
-          <p>
-            My expertise in serverless technologies and modern application
-            development enables me to help unlock new revenue streams and drive
-            growth for clients. By providing guidance on best practices in the
-            public cloud, including cost optimization, cloud-native development,
-            DevOps, data and analytics, migrations, and security, I help clients
-            stay ahead of the competition. With the rise of streaming and
-            on-demand content, the industry is facing unprecedented challenges
-            related to scalability and reliability. As a result, my focus is on
-            designing and implementing cloud-based architectures that are both
-            efficient and resilient. This allows clients to deliver superior
-            experiences to their customers while also improving their bottom
-            line.
+            I now lead as the Head of Media & Entertainment, where my role is centered around addressing the evolving challenges in the media industry. My expertise encompasses a broad range of solutions from innovative content production technologies to advanced monetization strategies. I am deeply involved in developing cloud-based solutions for media supply chain optimization, broadcast and live production enhancement, and direct-to-consumer services. My focus is on leveraging serverless technologies and modern application development to unlock new revenue opportunities and drive growth for our clients. By steering the integration of data and analytics, DevOps, and cloud-native development into our services, I ensure that our solutions not only meet the current industry demands but also set new standards for scalability, reliability, and customer experience in the media and entertainment sector.
           </p>
         </Box>
       </Flex>
