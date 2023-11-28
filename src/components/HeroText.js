@@ -38,11 +38,11 @@ function HeroText(props) {
     <StyledTypist cursor={{ show: false }}>
       <strong key={1}>I</strong>
       <span key={2}> Create Engaging Digital Media Experiences</span>
-      <Typist.Backspace count={38} delay={1000} />
-      <span key={3}> Innovate in Streaming and Content Distribution</span>
       <Typist.Backspace count={42} delay={1000} />
+      <span key={3}> Innovate in Streaming and Content Distribution</span>
+      <Typist.Backspace count={47} delay={1000} />
       <span key={4}> Have Expertise in Cloud Solutions for M&E</span>
-      <Typist.Backspace count={40} delay={1000} />
+      <Typist.Backspace count={42} delay={1000} />
       <span key={5}> Understand the Dynamics of Entertainment Tech</span>
       <Typist.Delay ms={300} />
       <span key={6}>.</span>
@@ -50,7 +50,7 @@ function HeroText(props) {
       <span key={7}>.</span>
       <Typist.Delay ms={900} />
       <span key={8}>.</span>
-      <Typist.Backspace count={47} delay={10} />
+      <Typist.Backspace count={50} delay={10} />
       <strong key={9}>But Mainly, I</strong>
       <span key={10}> Drive Innovation in Media & Entertainment</span>
     </StyledTypist>
