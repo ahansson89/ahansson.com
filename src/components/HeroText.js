@@ -37,22 +37,22 @@ function HeroText(props) {
   return (
     <StyledTypist cursor={{ show: false }}>
       <strong key={1}>I</strong>
-      <span key={2}> Make Fast Web Apps</span>
-      <Typist.Backspace count={19} delay={1000} />
-      <span key={3}> Architect Complex IT Systems</span>
-      <Typist.Backspace count={29} delay={1000} />
-      <span key={4}> Am Certified In Amazon Web Services & Google Cloud Platform</span>
-      <Typist.Backspace count={60} delay={1000} />
-      <span key={5}> Live In The Bay Area</span>
+      <span key={2}> Create Engaging Digital Media Experiences</span>
+      <Typist.Backspace count={38} delay={1000} />
+      <span key={3}> Innovate in Streaming and Content Distribution</span>
+      <Typist.Backspace count={42} delay={1000} />
+      <span key={4}> Have Expertise in Cloud Solutions for M&E</span>
+      <Typist.Backspace count={40} delay={1000} />
+      <span key={5}> Understand the Dynamics of Entertainment Tech</span>
       <Typist.Delay ms={300} />
       <span key={6}>.</span>
       <Typist.Delay ms={600} />
       <span key={7}>.</span>
       <Typist.Delay ms={900} />
       <span key={8}>.</span>
-      <Typist.Backspace count={25} delay={10} />
-      <strong key={9}>But Mostly I Just</strong>
-      <span key={10}> Do Awesome Stuff With Technology</span>
+      <Typist.Backspace count={47} delay={10} />
+      <strong key={9}>But Mainly, I</strong>
+      <span key={10}> Drive Innovation in Media & Entertainment</span>
     </StyledTypist>
   );
 }
