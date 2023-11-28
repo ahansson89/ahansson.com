@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    margin-bottom: 0.67em;
+    margin-bottom: 1em;
     color: #666;
   }
 
