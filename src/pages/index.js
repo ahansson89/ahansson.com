@@ -53,7 +53,13 @@ const IndexPage = ({ data }) => (
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>
           <p>
-            I now lead as the Head of Media & Entertainment, where my role is centered around addressing the evolving challenges in the media industry. My expertise encompasses a broad range of solutions from innovative content production technologies to advanced monetization strategies. I am deeply involved in developing cloud-based solutions for media supply chain optimization, broadcast and live production enhancement, and direct-to-consumer services. My focus is on leveraging serverless technologies and modern application development to unlock new revenue opportunities and drive growth for our clients. By steering the integration of data and analytics, DevOps, and cloud-native development into our services, I ensure that our solutions not only meet the current industry demands but also set new standards for scalability, reliability, and customer experience in the media and entertainment sector.
+            As the Head of Media & Entertainment, I'm on a thrilling quest to navigate and conquer the ever-evolving challenges of the media universe. Think of me as a maestro orchestrating a symphony of cutting-edge content production technologies and ingenious monetization strategies. From the magic of cloud-based solutions that jazz up the media supply chain, to the rhythm of enhancing broadcast and live production, all the way to the crescendo of direct-to-consumer services – it's a dynamic performance that keeps getting better.
+          </p>
+          <p>
+            Imagine me wielding serverless technologies and modern application development like a wand, conjuring new revenue streams and growth opportunities for our clients. It's not just about keeping up with the fast-paced media beat; it's about setting the tempo, leading the dance.
+          </p>
+          <p>
+            In this grand production, I'm also the choreographer of data and analytics, DevOps, and cloud-native development. This isn't just your typical behind-the-scenes work; it's about dazzling our audience with solutions that don't just meet the industry's rhythm but groove to a whole new beat of scalability, reliability, and exceptional customer experience. Welcome to the show where media and entertainment technology takes the center stage, and where every act is more exciting than the last!
           </p>
         </Box>
       </Flex>
