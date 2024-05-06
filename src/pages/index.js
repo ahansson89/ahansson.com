@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => (
       <Flex alignItems="center" flexDirection="column">
         <Box px={2} width={[1, 1 / 2]}>
           <p>
-            As the Head of Media & Entertainment, I'm on a thrilling quest to navigate and conquer the ever-evolving challenges of the media universe. Think of me as a maestro orchestrating a symphony of cutting-edge content production technologies and ingenious monetization strategies. From the magic of cloud-based solutions that jazz up the media supply chain, to the rhythm of enhancing broadcast and live production, all the way to the crescendo of direct-to-consumer services – it's a dynamic performance that keeps getting better.
+            As the Founder of AH2, I'm on a thrilling quest to navigate and conquer the ever-evolving challenges of the media universe. Think of me as a maestro orchestrating a symphony of cutting-edge content production technologies and ingenious monetization strategies. From the magic of cloud-based solutions that jazz up the media supply chain, to the rhythm of enhancing broadcast and live production, all the way to the crescendo of direct-to-consumer services – it's a dynamic performance that keeps getting better.
           </p>
           <p>
             Imagine me wielding serverless technologies and modern application development like a wand, conjuring new revenue streams and growth opportunities for our clients. It's not just about keeping up with the fast-paced media beat; it's about setting the tempo, leading the dance.
